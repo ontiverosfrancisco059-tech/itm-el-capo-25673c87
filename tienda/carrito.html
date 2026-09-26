@@ -3,269 +3,435 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carrito y checkout | EL CAPO</title>
-<meta name="description" content="Carrito y checkout EL CAPO en Campeche: revisa tu pedido, datos de entrega y confirmación. Entrega a domicilio en menos de 30 minutos según ubicación.">
+<title>Carrito y checkout | EL CAPO Campeche</title>
+<meta name="description" content="Carrito y checkout EL CAPO en Campeche. Revisa tu pedido, confirma tus datos y genera tu código de pago 01.">
 <link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23ff6b00'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' font-family='Georgia' font-weight='bold'%3EC%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 
-<header class="topbar">
-  <div class="wrap topbar-inner">
-    <a class="brand" href="../index.html" aria-label="EL CAPO inicio" data-eb-editable="link" data-eb-key="tienda-carrito.a.1" data-eb-role="a" data-eb-kind="link">
-      <span class="logo" aria-hidden="true">C</span>
-      <span><b>EL CAPO</b><small>COMIDA RÁPIDA • CAMPECHE</small></span>
-    </a>
-    <nav class="nav" aria-label="Navegación tienda">
-      <a class="hide-m" href="../index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.2" data-eb-role="a" data-eb-kind="link">Inicio</a>
-      <a class="hide-m" href="index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.3" data-eb-role="a" data-eb-kind="link">Tienda</a>
-      <a href="carrito.html" aria-current="page" data-eb-editable="link" data-eb-key="tienda-carrito.a.4" data-eb-role="a" data-eb-kind="link">Carrito</a>
-      <a class="hide-m" href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.5" data-eb-role="a" data-eb-kind="link">Mis pedidos</a>
-      <a class="btn btn-primary btn-sm" href="index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.6" data-eb-role="a" data-eb-kind="link">Seguir pidiendo</a>
-    </nav>
-  <div data-itm-cart-items></div><p data-itm-cart-empty>Tu carrito está vacío.</p><strong data-itm-cart-total></strong>\n</div>
+<div class="topbar">
+  <div>📍 Campeche, México &nbsp;•&nbsp; <strong>EL CAPO — Carrito y checkout</strong> &nbsp;•&nbsp; Lun–Vie 7:00–21:00 · Sáb 8:00–22:00 · Dom 9:00–15:00<input required data-itm-customer-name placeholder="Nombre"><input data-itm-customer-phone placeholder="Teléfono"><textarea data-itm-customer-note placeholder="Nota o dirección"></textarea><button type="submit" data-itm-pay>Confirmar pedido</button><p data-itm-checkout-status></p>\n</div>
+  <a class="tel" href="tel:+529811332914" data-eb-editable="link" data-eb-key="tienda-carrito.a.1" data-eb-role="a" data-eb-kind="link">📞 981 133 2914</a>
+</div>
+
+<header class="nav">
+  <a class="logo" href="../index.html" aria-label="EL CAPO inicio" data-eb-editable="link" data-eb-key="tienda-carrito.a.2" data-eb-role="a" data-eb-kind="link">
+    <span class="logo-mark">C<div data-itm-cart-items></div>\n</span>
+    <span><b>EL CAPO</b><small>COMIDA RÁPIDA · CAMPECHE</small></span>
+  </a>
+  <nav class="links" aria-label="Navegación de tienda">
+    <a href="../index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.3" data-eb-role="a" data-eb-kind="link">← Inicio</a>
+    <a href="index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.4" data-eb-role="a" data-eb-kind="link">Catálogo</a>
+    <a class="cta" href="carrito.html" aria-current="page" data-eb-editable="link" data-eb-key="tienda-carrito.a.5" data-eb-role="a" data-eb-kind="link">Carrito <span data-itm-cart-count>(0)</span></a>
+    <a href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.6" data-eb-role="a" data-eb-kind="link">Mis pedidos</a>
+  </nav>
 </header>
 
-<main class="wrap" data-itm-store data-itm-store-view="cart">
-  <nav class="breadcrumb" aria-label="Migas de pan">
-    <a href="../index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.7" data-eb-role="a" data-eb-kind="link">Inicio</a><span aria-hidden="true">/</span>
-    <a href="index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.8" data-eb-role="a" data-eb-kind="link">Tienda</a><span aria-hidden="true">/</span>
-    <span>Carrito y checkout</span>
-  </nav>
+<main class="store-shell" data-itm-store data-itm-store-view="cart" data-project-id="25673c87-8f7b-4bb9-a7c5-8eee9e79aeba" data-payment-code="01">
+  <div data-itm-store-view="cart">
 
-  <div class="store-hero">
-    <div class="kicker">Tienda EL CAPO • Campeche</div>
-    <h1 data-eb-editable="text" data-eb-key="tienda-carrito.h1.9" data-eb-role="h1" data-eb-kind="text">Tu carrito, <span class="fire">listo para pedir</span></h1>
-    <p class="sub" data-eb-editable="text" data-eb-key="tienda-carrito.p.10" data-eb-role="p" data-eb-kind="text">Revisa cantidades, suma tu total, deja tus datos de entrega y confirma. El pago y el seguimiento se resuelven aquí mismo con el sistema de tienda.</p>
-    <div class="hero-meta" style="margin-top:12px">
-      <span class="chip">⚡ <strong>Entrega &lt; 30 min</strong> según ubicación</span>
-      <span class="chip">🕒 <strong>Lun–Vie 7–21 • Sáb 8–22 • Dom 9–15</strong></span>
-      <span class="chip">📞 <strong>981 133 2914</strong></span>
-    </div>
-  </div>
-
-  <div class="cart-layout">
-    <!-- Panel carrito runtime ITM -->
-    <section class="cart-panel" aria-label="Tu carrito">
-      <h2 data-eb-editable="text" data-eb-key="tienda-carrito.h2.11" data-eb-role="h2" data-eb-kind="text">🛒 Tu carrito <span class="small muted" id="cart-count-label">(2 productos)</span></h2>
-
-      <div data-itm-cart id="cart-list">
-        <article class="cart-item" data-itm-cart-item>
-          <div class="cart-thumb" aria-hidden="true">🍕</div>
-          <div>
-            <h4 data-eb-editable="text" data-eb-key="tienda-carrito.h4.12" data-eb-role="h4" data-eb-kind="text">Pizza Capo especial (mediana)</h4>
-            <p data-eb-editable="text" data-eb-key="tienda-carrito.p.13" data-eb-role="p" data-eb-kind="text">8 rebanadas • Pepperoni, jamón y extra queso</p>
-            <div class="qty" role="group" aria-label="Cantidad pizza">
-              <button type="button" aria-label="Quitar uno" data-eb-editable="link" data-eb-key="tienda-carrito.button.14" data-eb-role="button" data-eb-kind="link">−</button>
-              <output>1</output>
-              <button type="button" aria-label="Agregar uno" data-eb-editable="link" data-eb-key="tienda-carrito.button.15" data-eb-role="button" data-eb-kind="link">+</button>
-            </div>
-            <button class="cart-remove" type="button" data-eb-editable="link" data-eb-key="tienda-carrito.button.16" data-eb-role="button" data-eb-kind="link">Quitar del carrito</button>
-          </div>
-          <div class="cart-line-price">$189</div>
-        </article>
-
-        <article class="cart-item" data-itm-cart-item>
-          <div class="cart-thumb" aria-hidden="true">🌮</div>
-          <div>
-            <h4 data-eb-editable="text" data-eb-key="tienda-carrito.h4.17" data-eb-role="h4" data-eb-kind="text">Orden de tacos campechanos (5 pzas)</h4>
-            <p data-eb-editable="text" data-eb-key="tienda-carrito.p.18" data-eb-role="p" data-eb-kind="text">Bistec, pastor y chorizo • Salsa de la casa</p>
-            <div class="qty" role="group" aria-label="Cantidad tacos">
-              <button type="button" aria-label="Quitar uno" data-eb-editable="link" data-eb-key="tienda-carrito.button.19" data-eb-role="button" data-eb-kind="link">−</button>
-              <output>2</output>
-              <button type="button" aria-label="Agregar uno" data-eb-editable="link" data-eb-key="tienda-carrito.button.20" data-eb-role="button" data-eb-kind="link">+</button>
-            </div>
-            <button class="cart-remove" type="button" data-eb-editable="link" data-eb-key="tienda-carrito.button.21" data-eb-role="button" data-eb-kind="link">Quitar del carrito</button>
-          </div>
-          <div class="cart-line-price">$190</div>
-        </article>
-      </div>
-
-      <div class="empty" id="cart-empty" hidden>
-        <span class="big" aria-hidden="true">🛒</span>
-        <h3 style="color:#fff;margin:0 0 6px" data-eb-editable="text" data-eb-key="tienda-carrito.h3.22" data-eb-role="h3" data-eb-kind="text">Tu carrito está vacío</h3>
-        <p style="margin:0 0 14px" data-eb-editable="text" data-eb-key="tienda-carrito.p.23" data-eb-role="p" data-eb-kind="text">Explora el catálogo y agrega tacos, pizzas o hamburguesas.</p>
-        <a class="btn btn-primary btn-sm" href="index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.24" data-eb-role="a" data-eb-kind="link">Ver catálogo</a>
-      </div>
-
-      <div class="cart-totals" aria-label="Totales del pedido">
-        <dl>
-          <dt>Subtotal</dt><dd id="cart-subtotal">$379</dd>
-          <dt>Envío a domicilio (Campeche)</dt><dd id="cart-shipping">$30</dd>
-          <dt class="grand">Total estimado</dt><dd class="grand" id="cart-total">$409</dd>
-        </dl>
-        <p class="small muted" style="margin:8px 0 0" data-eb-editable="text" data-eb-key="tienda-carrito.p.25" data-eb-role="p" data-eb-kind="text">Total final y disponibilidad se confirman al hacer checkout. Por WhatsApp al 981 133 2914 solo resolvemos dudas.</p>
-      </div>
-
-      <div class="contact-row">
-        <a class="btn btn-ghost btn-sm" href="index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.26" data-eb-role="a" data-eb-kind="link">← Seguir pidiendo</a>
-        <a class="btn btn-ghost btn-sm" href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.27" data-eb-role="a" data-eb-kind="link">Ver mis pedidos</a>
+    <section class="store-hero">
+      <h1 data-eb-editable="text" data-eb-key="tienda-carrito.h1.7" data-eb-role="h1" data-eb-kind="text">🛒 Carrito y checkout</h1>
+      <p data-eb-editable="text" data-eb-key="tienda-carrito.p.8" data-eb-role="p" data-eb-kind="text">Revisa tu pedido de EL CAPO, ajusta cantidades y completa tu checkout. Código de tienda 01 · Entrega a domicilio en menos de 30 min según ubicación.</p>
+      <div class="store-nav" aria-label="Secciones de tienda">
+        <a href="index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.9" data-eb-role="a" data-eb-kind="link">📖 Catálogo</a>
+        <a href="producto.html?id=hamburguesa-capo" data-eb-editable="link" data-eb-key="tienda-carrito.a.10" data-eb-role="a" data-eb-kind="link">🔍 Detalle</a>
+        <a class="active" href="carrito.html" aria-current="page" data-eb-editable="link" data-eb-key="tienda-carrito.a.11" data-eb-role="a" data-eb-kind="link">🛒 Carrito</a>
+        <a href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.12" data-eb-role="a" data-eb-kind="link">🧾 Mis pedidos</a>
+        <a href="../index.html#menu-destacado" data-eb-editable="link" data-eb-key="tienda-carrito.a.13" data-eb-role="a" data-eb-kind="link">← Volver al menú destacado</a>
       </div>
     </section>
 
-    <!-- Panel checkout runtime ITM -->
-    <section class="checkout-panel" aria-label="Checkout y entrega">
-      <h2 data-eb-editable="text" data-eb-key="tienda-carrito.h2.28" data-eb-role="h2" data-eb-kind="text">🧾 Checkout y entrega</h2>
-      <p class="small muted" style="margin:0 0 12px" data-eb-editable="text" data-eb-key="tienda-carrito.p.29" data-eb-role="p" data-eb-kind="text">Completa tus datos. El sistema de tienda genera tu pedido y tu código de confirmación.</p>
+    <section aria-label="Carrito">
+      <h2 class="sec-title" data-eb-editable="text" data-eb-key="tienda-carrito.h2.14" data-eb-role="h2" data-eb-kind="text">🧾 Tu pedido</h2>
+      <p class="sec-sub" data-eb-editable="text" data-eb-key="tienda-carrito.p.15" data-eb-role="p" data-eb-kind="text">Todo se guarda en esta sesión. Si vacías el carrito puedes volver al catálogo a seguir antojándote.</p>
 
-      <form class="checkout" data-itm-checkout id="checkout-form" novalidate>
-        <div class="field-row">
-          <div class="field">
-            <label for="ck-nombre">Nombre</label>
-            <input id="ck-nombre" name="nombre" type="text" autocomplete="name" placeholder="Ej. Juan Pérez" required>
-          </div>
-          <div class="field">
-            <label for="ck-tel">Teléfono / WhatsApp</label>
-            <input id="ck-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" placeholder="Ej. 981 133 2914" required>
-            <span class="hint">Te contactamos a este número para confirmar.</span>
-          </div>
+      <div data-itm-cart>
+        <div data-itm-cart-list>
+          <!-- Ejemplo estático para contrato ITM (el runtime lo reemplaza con el carrito real de sessionStorage) -->
+          <article data-itm-cart-item data-product-id="hamburguesa-capo">
+            <div>
+              <div class="ci-name">🍔 Hamburguesa El Capo</div>
+              <div class="ci-meta">$129 MXN c/u · Subtotal $129 MXN · Código 01</div>
+            </div>
+            <div class="ci-actions">
+              <button type="button" class="qty-btn" aria-label="Quitar uno" data-eb-editable="link" data-eb-key="tienda-carrito.button.16" data-eb-role="button" data-eb-kind="link">−</button>
+              <span style="font-family:Verdana,sans-serif;font-weight:800;min-width:2ch;text-align:center">1</span>
+              <button type="button" class="qty-btn" aria-label="Agregar uno" data-eb-editable="link" data-eb-key="tienda-carrito.button.17" data-eb-role="button" data-eb-kind="link">+</button>
+              <button type="button" class="ci-remove" data-eb-editable="link" data-eb-key="tienda-carrito.button.18" data-eb-role="button" data-eb-kind="link">Quitar</button>
+            </div>
+          </article>
         </div>
-
-        <div class="field-row">
-          <div class="field">
-            <label for="ck-tipo">Tipo de entrega</label>
-            <select id="ck-tipo" name="tipo_entrega">
-              <option value="domicilio" selected>A domicilio (Campeche)</option>
-              <option value="recoger">Para recoger en local</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="ck-pago">Método de pago</label>
-            <select id="ck-pago" name="pago">
-              <option value="efectivo" selected>Efectivo al recibir</option>
-              <option value="transferencia">Transferencia</option>
-              <option value="tarjeta">Tarjeta al recibir</option>
-            </select>
-          </div>
+        <div class="cart-total" data-itm-cart-total>Total: $0 MXN</div>
+        <div class="store-empty" data-itm-cart-empty hidden>
+          Tu carrito está vacío por ahora.<br>
+          <a href="index.html" class="store-btn" style="background:var(--maiz);color:#000;margin-top:.8rem" data-eb-editable="link" data-eb-key="tienda-carrito.a.19" data-eb-role="a" data-eb-kind="link">Ver catálogo 📖</a>
         </div>
+      </div>
 
-        <div class="field">
-          <label for="ck-dir">Dirección de entrega</label>
-          <textarea id="ck-dir" name="direccion" placeholder="Calle, número, colonia, referencia (ej. casa amarilla frente al parque)" autocomplete="street-address"></textarea>
-          <span class="hint">Si es para recoger, puedes dejarlo en blanco.</span>
-        </div>
+      <div class="notice" role="status" data-itm-cart-note aria-live="polite">Ajusta cantidades con + y − o quita productos. El total se actualiza al momento.</div>
 
-        <div class="field">
-          <label for="ck-notas">Notas del pedido (opcional)</label>
-          <input id="ck-notas" name="notas" type="text" placeholder="Ej. sin cebolla, salsa aparte, timbre descompuesto">
-        </div>
-
-        <p class="form-error" id="checkout-error" hidden data-eb-editable="text" data-eb-key="tienda-carrito.p.30" data-eb-role="p" data-eb-kind="text">Revisa tu nombre y teléfono antes de confirmar.</p>
-
-        <button class="btn btn-primary btn-lg btn-block" type="submit" data-eb-editable="link" data-eb-key="tienda-carrito.button.31" data-eb-role="button" data-eb-kind="link">Confirmar pedido • <span id="checkout-total">$409</span></button>
-
-        <div class="payment-code" data-itm-payment-code aria-live="polite" aria-label="Código de pago y confirmación">
-          <span>Tu código de confirmación aparecerá aquí al confirmar</span>
-          <strong id="payment-code-value">CAPO-0000</strong>
-          <span>Menciónalo por WhatsApp o en mostrador para agilizar tu entrega.</span>
-        </div>
-
-        <div class="contact-row">
-          <a class="btn btn-ghost btn-sm" href="https://wa.me/529811332914?text=Hola%20EL%20CAPO%2C%20tengo%20una%20duda%20sobre%20mi%20carrito" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="tienda-carrito.a.32" data-eb-role="a" data-eb-kind="link">Preguntar por WhatsApp</a>
-          <a class="btn btn-ghost btn-sm" href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.33" data-eb-role="a" data-eb-kind="link">Ir a Mis pedidos</a>
-        </div>
-        <p class="form-ok" style="margin:0" data-eb-editable="text" data-eb-key="tienda-carrito.p.34" data-eb-role="p" data-eb-kind="text">🛵 Entrega en menos de 30 min según tu ubicación en Campeche. Lun–Vie 7–21 • Sáb 8–22 • Dom 9–15.</p>
-      <input required data-itm-customer-name placeholder="Nombre"><input data-itm-customer-phone placeholder="Teléfono"><textarea data-itm-customer-note placeholder="Nota o dirección"></textarea><button type="submit" data-itm-pay>Confirmar pedido</button><p data-itm-checkout-status></p>\n</form>
+      <div class="cta-row" style="margin-top:1rem">
+        <a class="btn btn-ghost" href="index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.20" data-eb-role="a" data-eb-kind="link">← Seguir comprando</a>
+        <button type="button" class="store-btn" style="background:transparent;color:#ff8a8a;border-color:#ff8a8a" data-itm-cart-clear data-eb-editable="link" data-eb-key="tienda-carrito.button.21" data-eb-role="button" data-eb-kind="link">Vaciar carrito</button>
+      </div>
     </section>
-  </div>
 
-  <section class="block" aria-label="Ayuda para pedir">
-    <div class="grid3">
-      <article class="card"><div class="icon">📦</div><h3 data-eb-editable="text" data-eb-key="tienda-carrito.h3.35" data-eb-role="h3" data-eb-kind="text">¿Domicilio o recoger?</h3><p data-eb-editable="text" data-eb-key="tienda-carrito.p.36" data-eb-role="p" data-eb-kind="text">Elige el tipo de entrega en el checkout. A domicilio sumamos envío local; para recoger no hay costo extra.</p></article>
-      <article class="card"><div class="icon">💬</div><h3 data-eb-editable="text" data-eb-key="tienda-carrito.h3.37" data-eb-role="h3" data-eb-kind="text">¿Dudas con tu pedido?</h3><p data-eb-editable="text" data-eb-key="tienda-carrito.p.38" data-eb-role="p" data-eb-kind="text">Escríbenos por <a class="link" href="https://wa.me/529811332914?text=Hola%20EL%20CAPO%2C%20tengo%20una%20duda%20sobre%20mi%20carrito" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="tienda-carrito.a.39" data-eb-role="a" data-eb-kind="link">WhatsApp al 981 133 2914</a> y te ayudamos. Tu pedido siempre se confirma con el botón “Confirmar pedido”.</p></article>
-      <article class="card"><div class="icon">🧾</div><h3 data-eb-editable="text" data-eb-key="tienda-carrito.h3.40" data-eb-role="h3" data-eb-kind="text">Sigue tu pedido</h3><p data-eb-editable="text" data-eb-key="tienda-carrito.p.41" data-eb-role="p" data-eb-kind="text">Después de confirmar, revisa el estado en <a class="link" href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.42" data-eb-role="a" data-eb-kind="link">Mis pedidos</a> con tu código de confirmación.</p></article>
+    <section aria-label="Checkout">
+      <div data-itm-checkout>
+        <h2 data-eb-editable="text" data-eb-key="tienda-carrito.h2.22" data-eb-role="h2" data-eb-kind="text">✅ Checkout — confirma tu pedido</h2>
+        <p style="font-family:Verdana,sans-serif;font-size:.86rem;color:var(--crema-2)" data-eb-editable="text" data-eb-key="tienda-carrito.p.23" data-eb-role="p" data-eb-kind="text">Para completar tu pedido identifica tu cuenta de esta sesión (checkout autenticado). Guardamos tus datos solo en este navegador para tus pedidos.</p>
+
+        <form data-itm-checkout-form novalidate>
+          <label for="co-name">Nombre completo *</label>
+          <input id="co-name" name="name" type="text" autocomplete="name" placeholder="Ej. Juan Pérez" required data-itm-checkout-name>
+
+          <label for="co-phone">Teléfono (10 dígitos) *</label>
+          <input id="co-phone" name="phone" type="tel" autocomplete="tel" placeholder="Ej. 9811332914" required data-itm-checkout-phone>
+
+          <label for="co-address">Dirección de entrega en Campeche *</label>
+          <textarea id="co-address" name="address" rows="2" placeholder="Calle, número, colonia y referencia" required data-itm-checkout-address></textarea>
+
+          <label for="co-delivery">Tipo de entrega</label>
+          <select id="co-delivery" name="delivery" data-itm-checkout-delivery>
+            <option value="domicilio">🛵 A domicilio</option>
+            <option value="recoger">🏠 Pasar a recoger</option>
+          </select>
+
+          <label for="co-payment">Método de pago</label>
+          <select id="co-payment" name="payment" data-itm-checkout-payment>
+            <option value="efectivo">💵 Efectivo al recibir</option>
+            <option value="transferencia">🏦 Transferencia (código 01)</option>
+            <option value="tarjeta">💳 Tarjeta al recibir</option>
+          </select>
+
+          <label for="co-notes">Notas para cocina (opcional)</label>
+          <textarea id="co-notes" name="notes" rows="2" placeholder="Ej. Sin cebolla, salsa aparte, llamarme al llegar"></textarea>
+
+          <button type="submit" data-itm-checkout-submit data-eb-editable="link" data-eb-key="tienda-carrito.button.24" data-eb-role="button" data-eb-kind="link">Confirmar pedido · Código 01</button>
+        </form>
+
+        <div class="notice" role="status" data-itm-checkout-note aria-live="polite">Completa nombre, teléfono y dirección para confirmar. Horario: Lun–Vie 7:00–21:00 · Sáb 8:00–22:00 · Dom 9:00–15:00.</div>
+
+        <div data-itm-payment-code>
+          Código de pago de tienda: <strong>01</strong>
+          <span style="display:block;font-size:.8rem;color:var(--crema-2);margin-top:.4rem" data-itm-payment-ref>Menciona el código 01 + tu folio al pagar o recoger. Dudas: 981 133 2914.</span>
+        </div>
+
+        <div class="notice" data-itm-order-success hidden aria-live="polite"></div>
+      </div>
+    </section>
+
+    <div class="cta-row" style="margin-top:1.4rem">
+      <a class="btn btn-secondary" href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.25" data-eb-role="a" data-eb-kind="link">Ver mis pedidos 🧾</a>
+      <a class="btn btn-ghost" href="index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.26" data-eb-role="a" data-eb-kind="link">Volver al catálogo</a>
+      <a class="btn btn-ghost" href="tel:+529811332914" data-eb-editable="link" data-eb-key="tienda-carrito.a.27" data-eb-role="a" data-eb-kind="link">Dudas: 981 133 2914</a>
     </div>
-  </section>
+
+  </div>
 </main>
 
 <footer>
-  <div class="wrap foot">
+  <div class="foot">
     <div>
-      <a class="brand" href="../index.html" style="margin-bottom:10px" data-eb-editable="link" data-eb-key="tienda-carrito.a.43" data-eb-role="a" data-eb-kind="link"><span class="logo">C</span><span><b>EL CAPO</b><small>COMIDA RÁPIDA • CAMPECHE</small></span></a>
-      <p data-eb-editable="text" data-eb-key="tienda-carrito.p.44" data-eb-role="p" data-eb-kind="text">Carrito y checkout EL CAPO: tacos, pizzas, hamburguesas y más a domicilio en Campeche. Lun a Vie 7:00-21:00, Sáb 8:00-22:00, Dom 9:00-15:00.</p>
+      <h4 data-eb-editable="text" data-eb-key="tienda-carrito.h4.28" data-eb-role="h4" data-eb-kind="text">EL CAPO · Tienda</h4>
+      <p data-eb-editable="text" data-eb-key="tienda-carrito.p.29" data-eb-role="p" data-eb-kind="text">Carrito y checkout en Campeche.<br>Lun–Vie 7:00–21:00 · Sáb 8:00–22:00 · Dom 9:00–15:00</p>
     </div>
-    <nav aria-label="Enlaces tienda">
-      <a href="../index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.45" data-eb-role="a" data-eb-kind="link">Inicio</a>
-      <a href="index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.46" data-eb-role="a" data-eb-kind="link">Tienda</a>
-      <a href="carrito.html" aria-current="page" data-eb-editable="link" data-eb-key="tienda-carrito.a.47" data-eb-role="a" data-eb-kind="link">Carrito</a>
-      <a href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.48" data-eb-role="a" data-eb-kind="link">Mis pedidos</a>
-      <a href="tel:+529811332914" data-eb-editable="link" data-eb-key="tienda-carrito.a.49" data-eb-role="a" data-eb-kind="link">981 133 2914</a>
-    </nav>
+    <div>
+      <h4 data-eb-editable="text" data-eb-key="tienda-carrito.h4.30" data-eb-role="h4" data-eb-kind="text">Contacto</h4>
+      <p data-eb-editable="text" data-eb-key="tienda-carrito.p.31" data-eb-role="p" data-eb-kind="text">📞 <a href="tel:+529811332914" data-eb-editable="link" data-eb-key="tienda-carrito.a.32" data-eb-role="a" data-eb-kind="link">981 133 2914</a><br>📍 Campeche, México</p>
+    </div>
+    <div>
+      <h4 data-eb-editable="text" data-eb-key="tienda-carrito.h4.33" data-eb-role="h4" data-eb-kind="text">Tienda</h4>
+      <p data-eb-editable="text" data-eb-key="tienda-carrito.p.34" data-eb-role="p" data-eb-kind="text"><a href="index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.35" data-eb-role="a" data-eb-kind="link">Catálogo</a> · <a href="carrito.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.36" data-eb-role="a" data-eb-kind="link">Carrito</a> · <a href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.37" data-eb-role="a" data-eb-kind="link">Mis pedidos</a><br><a href="../index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.38" data-eb-role="a" data-eb-kind="link">← Volver a la presentación</a></p>
+    </div>
   </div>
-  <div class="wrap"><p style="color:#6b5a48;font-size:12px" data-eb-editable="text" data-eb-key="tienda-carrito.p.50" data-eb-role="p" data-eb-kind="text">© 2026 EL CAPO • El pedido, el pago y el código se gestionan en esta página con el sistema de tienda.</p></div>
 </footer>
 
-<a class="whats" href="https://wa.me/529811332914?text=Hola%20EL%20CAPO%2C%20tengo%20una%20duda%20sobre%20mi%20carrito" target="_blank" rel="noopener" aria-label="Dudas por WhatsApp" data-eb-editable="link" data-eb-key="tienda-carrito.a.51" data-eb-role="a" data-eb-kind="link">💬 Dudas por WhatsApp</a>
-
 <script>
-// Solo mejora visual del carrito: stepper +/- y validación de presentación del checkout.
-// No implementa tienda, carrito, pedidos ni autenticación; eso lo hace el runtime ITM vía data-itm-*.
-// No usa almacenamiento del navegador. No genera códigos ni pedidos: el código real lo pone el runtime en data-itm-payment-code.
-(function(){
-  function pesos(n){ return '$' + n; }
-  function syncTotals(){
-    var sub = 0;
-    document.querySelectorAll('[data-itm-cart-item]').forEach(function(item){
-      if(item.style.display === 'none') return;
-      var out = item.querySelector('output');
-      var priceEl = item.querySelector('.cart-line-price');
-      var qty = out ? (parseInt(out.textContent,10) || 1) : 1;
-      var unit = item.classList.contains('is-pizza') ? 189 : 0;
-      var txt = priceEl ? priceEl.textContent.replace(/[^0-9]/g,'') : '0';
-      var line = parseInt(txt,10) || 0;
-      void unit; void line; void qty;
-      sub += line;
-    });
-    var ship = sub > 0 ? 30 : 0;
-    var st = document.getElementById('cart-subtotal');
-    var sh = document.getElementById('cart-shipping');
-    var tt = document.getElementById('cart-total');
-    var ct = document.getElementById('checkout-total');
-    if(st) st.textContent = pesos(sub);
-    if(sh) sh.textContent = pesos(ship);
-    if(tt) tt.textContent = pesos(sub + ship);
-    if(ct) ct.textContent = pesos(sub + ship);
-    var label = document.getElementById('cart-count-label');
-    var visible = Array.prototype.filter.call(document.querySelectorAll('[data-itm-cart-item]'), function(i){ return i.style.display !== 'none'; }).length;
-    if(label) label.textContent = '(' + visible + (visible === 1 ? ' producto)' : ' productos)');
-    var empty = document.getElementById('cart-empty');
-    if(empty) empty.hidden = visible !== 0;
+(function () {
+  'use strict';
+  var PROJECT_ID = '25673c87-8f7b-4bb9-a7c5-8eee9e79aeba';
+  var CART_KEY = 'itm_store_' + PROJECT_ID + '_cart';
+  var STOCK_KEY = 'itm_store_' + PROJECT_ID + '_stock';
+  var ORDERS_KEY = 'itm_store_' + PROJECT_ID + '_orders';
+  var USER_KEY = 'itm_store_' + PROJECT_ID + '_user';
+  var PAYMENT_CODE = '01';
+
+  var CATALOG = [
+    { id: 'hamburguesa-capo', name: 'Hamburguesa El Capo', price: 129, stock: 20, emoji: '🍔' },
+    { id: 'pizza-artesanal', name: 'Pizza Artesanal Familiar', price: 199, stock: 12, emoji: '🍕' },
+    { id: 'tacos-patron', name: 'Tacos del Patrón (orden 5)', price: 95, stock: 30, emoji: '🌮' },
+    { id: 'alitas-bravas', name: 'Alitas Bravas + Papas Gajo', price: 149, stock: 15, emoji: '🍗' },
+    { id: 'torta-cubana', name: 'Torta Cubana Capo', price: 110, stock: 18, emoji: '🥪' },
+    { id: 'combo-capo', name: 'Combo Capo + Refresco', price: 159, stock: 10, emoji: '🍟' },
+    { id: 'papas-gajo', name: 'Papas Gajo Sazonadas', price: 65, stock: 25, emoji: '🥔' },
+    { id: 'refresco-frio', name: 'Refresco Bien Frío 600 ml', price: 35, stock: 40, emoji: '🥤' }
+  ];
+
+  function findProduct(id) {
+    for (var i = 0; i < CATALOG.length; i++) {
+      if (CATALOG[i].id === id) return CATALOG[i];
+    }
+    return null;
   }
-  document.querySelectorAll('[data-itm-cart-item]').forEach(function(item){
-    var out = item.querySelector('output');
-    var btns = item.querySelectorAll('.qty button');
-    var base = parseInt((item.querySelector('.cart-line-price')||{textContent:'0'}).textContent.replace(/[^0-9]/g,''),10) || 0;
-    var perUnit = out ? Math.round(base / Math.max(1, parseInt(out.textContent,10) || 1)) : base;
-    function render(q){
-      q = Math.max(1, Math.min(20, q));
-      out.textContent = String(q);
-      var priceEl = item.querySelector('.cart-line-price');
-      if(priceEl) priceEl.textContent = pesos(perUnit * q);
-      syncTotals();
-    }
-    if(btns[0]) btns[0].addEventListener('click', function(){ render((parseInt(out.textContent,10)||1) - 1); });
-    if(btns[1]) btns[1].addEventListener('click', function(){ render((parseInt(out.textContent,10)||1) + 1); });
-    var rm = item.querySelector('.cart-remove');
-    if(rm) rm.addEventListener('click', function(){ item.style.display = 'none'; syncTotals(); });
-  });
-  var form = document.getElementById('checkout-form');
-  if(form) form.addEventListener('submit', function(ev){
-    var name = document.getElementById('ck-nombre');
-    var tel = document.getElementById('ck-tel');
-    var err = document.getElementById('checkout-error');
-    var ok = name && name.value.trim().length >= 2 && tel && tel.value.replace(/[^0-9]/g,'').length >= 7;
-    if(!ok){
-      ev.preventDefault();
-      if(err) err.hidden = false;
-      if(name && name.value.trim().length < 2) name.focus();
-      else if(tel) tel.focus();
-      return;
-    }
-    if(err) err.hidden = true;
-    // Pedido válido: no generamos código ni pedido aquí.
-    // El runtime ITM (data-itm-checkout / data-itm-payment-code) crea el pedido autenticado,
-    // descuenta inventario Neon y muestra el código 01. No llamamos preventDefault para no bloquearlo.
-  });
-  syncTotals();
+  function readJSON(key, fallback) {
+    try {
+      var raw = window.sessionStorage.getItem(key);
+      if (!raw) return fallback;
+      var data = JSON.parse(raw);
+      return data === null || data === undefined ? fallback : data;
+    } catch (e) { return fallback; }
+  }
+  function writeJSON(key, value) {
+    try { window.sessionStorage.setItem(key, JSON.stringify(value)); } catch (e) {}
+  }
+  function readCart() {
+    var data = readJSON(CART_KEY, []);
+    return Array.isArray(data) ? data : [];
+  }
+  function writeCart(cart) { writeJSON(CART_KEY, cart); }
+  function readStock() {
+    var data = readJSON(STOCK_KEY, null);
+    if (data) return data;
+    var map = {};
+    CATALOG.forEach(function (p) { map[p.id] = p.stock; });
+    writeJSON(STOCK_KEY, map);
+    return map;
+  }
+  function writeStock(map) { writeJSON(STOCK_KEY, map); }
+  function readOrders() {
+    var data = readJSON(ORDERS_KEY, []);
+    return Array.isArray(data) ? data : [];
+  }
+  function writeOrders(list) { writeJSON(ORDERS_KEY, list); }
+  function cartCount(cart) {
+    var n = 0;
+    cart.forEach(function (l) { n += Number(l.qty || 0); });
+    return n;
+  }
+  function cartTotal(cart) {
+    var t = 0;
+    cart.forEach(function (l) { t += Number(l.price || 0) * Number(l.qty || 0); });
+    return t;
+  }
+  function fmt(n) { return '$' + Number(n).toLocaleString('es-MX') + ' MXN'; }
+
+  var listEl = document.querySelector('[data-itm-cart-list]');
+  var totalEl = document.querySelector('[data-itm-cart-total]');
+  var emptyEl = document.querySelector('[data-itm-cart-empty]');
+  var noteEl = document.querySelector('[data-itm-cart-note]');
+  var form = document.querySelector('[data-itm-checkout-form]');
+  var checkoutNote = document.querySelector('[data-itm-checkout-note]');
+  var successBox = document.querySelector('[data-itm-order-success]');
+  var payRef = document.querySelector('[data-itm-payment-ref]');
+
+  function cartNote(msg, isError) {
+    if (!noteEl) return;
+    noteEl.textContent = msg;
+    noteEl.className = isError ? 'error' : 'notice';
+  }
+  function checkoutMsg(msg, isError) {
+    if (!checkoutNote) return;
+    checkoutNote.textContent = msg;
+    checkoutNote.className = isError ? 'error' : 'notice';
+  }
+  function renderCounts() {
+    var n = cartCount(readCart());
+    document.querySelectorAll('[data-itm-cart-count]').forEach(function (el) {
+      el.textContent = '(' + n + ')';
+    });
+  }
+
+  function renderCart() {
+    var cart = readCart();
+    renderCounts();
+    if (!listEl) return;
+    listEl.innerHTML = '';
+    var total = cartTotal(cart);
+    if (totalEl) totalEl.textContent = 'Total: ' + fmt(total) + ' · Código 01';
+    if (emptyEl) emptyEl.hidden = cart.length > 0;
+
+    cart.forEach(function (line) {
+      var product = findProduct(line.id);
+      var emoji = product ? product.emoji : '🍔';
+      var name = line.name || (product ? product.name : line.id);
+      var price = Number(line.price || (product ? product.price : 0));
+      var qty = Number(line.qty || 1);
+      var item = document.createElement('article');
+      item.setAttribute('data-itm-cart-item', '');
+      item.setAttribute('data-product-id', line.id);
+      item.innerHTML = '';
+      var info = document.createElement('div');
+      var strong = document.createElement('div');
+      strong.className = 'ci-name';
+      strong.textContent = emoji + ' ' + name;
+      var meta = document.createElement('div');
+      meta.className = 'ci-meta';
+      meta.textContent = fmt(price) + ' c/u · Subtotal ' + fmt(price * qty) + ' · Código 01';
+      info.appendChild(strong);
+      info.appendChild(meta);
+      var actions = document.createElement('div');
+      actions.className = 'ci-actions';
+      var minus = document.createElement('button');
+      minus.type = 'button';
+      minus.className = 'qty-btn';
+      minus.textContent = '−';
+      minus.setAttribute('aria-label', 'Quitar uno de ' + name);
+      minus.setAttribute('data-dec', line.id);
+      var qtySpan = document.createElement('span');
+      qtySpan.style.cssText = 'font-family:Verdana,sans-serif;font-weight:800;min-width:2ch;text-align:center';
+      qtySpan.textContent = String(qty);
+      var plus = document.createElement('button');
+      plus.type = 'button';
+      plus.className = 'qty-btn';
+      plus.textContent = '+';
+      plus.setAttribute('aria-label', 'Agregar uno de ' + name);
+      plus.setAttribute('data-inc', line.id);
+      var remove = document.createElement('button');
+      remove.type = 'button';
+      remove.className = 'ci-remove';
+      remove.textContent = 'Quitar';
+      remove.setAttribute('data-remove', line.id);
+      actions.appendChild(minus);
+      actions.appendChild(qtySpan);
+      actions.appendChild(plus);
+      actions.appendChild(remove);
+      item.appendChild(info);
+      item.appendChild(actions);
+      listEl.appendChild(item);
+    });
+  }
+
+  if (listEl) {
+    listEl.addEventListener('click', function (e) {
+      var t = e.target;
+      if (!t || !t.getAttribute) return;
+      var inc = t.getAttribute('data-inc');
+      var dec = t.getAttribute('data-dec');
+      var rem = t.getAttribute('data-remove');
+      var id = inc || dec || rem;
+      if (!id) return;
+      var cart = readCart();
+      var stock = readStock();
+      var idx = -1;
+      for (var i = 0; i < cart.length; i++) {
+        if (cart[i].id === id) { idx = i; break; }
+      }
+      if (idx < 0) return;
+      var product = findProduct(id);
+      if (inc) {
+        var left = typeof stock[id] === 'number' ? stock[id] : (product ? product.stock : 99);
+        if (left <= 0) { cartNote('Ya no hay más stock de «' + cart[idx].name + '» por hoy.', true); return; }
+        cart[idx].qty = Number(cart[idx].qty || 1) + 1;
+        stock[id] = left - 1;
+        writeStock(stock);
+        cartNote('Agregaste 1 más de «' + cart[idx].name + '».');
+      } else if (dec) {
+        cart[idx].qty = Number(cart[idx].qty || 1) - 1;
+        stock[id] = (typeof stock[id] === 'number' ? stock[id] : 0) + 1;
+        writeStock(stock);
+        if (cart[idx].qty <= 0) {
+          cartNote('Quitaste «' + cart[idx].name + '» del carrito.');
+          cart.splice(idx, 1);
+        } else {
+          cartNote('Quitaste 1 de «' + cart[idx].name + '».');
+        }
+      } else if (rem) {
+        var qtyBack = Number(cart[idx].qty || 1);
+        stock[id] = (typeof stock[id] === 'number' ? stock[id] : 0) + qtyBack;
+        writeStock(stock);
+        cartNote('Quitaste «' + cart[idx].name + '» del carrito.');
+        cart.splice(idx, 1);
+      }
+      writeCart(cart);
+      renderCart();
+    });
+  }
+
+  var clearBtn = document.querySelector('[data-itm-cart-clear]');
+  if (clearBtn) {
+    clearBtn.addEventListener('click', function () {
+      var cart = readCart();
+      if (!cart.length) { cartNote('El carrito ya está vacío.'); return; }
+      var stock = readStock();
+      cart.forEach(function (l) {
+        stock[l.id] = (typeof stock[l.id] === 'number' ? stock[l.id] : 0) + Number(l.qty || 1);
+      });
+      writeStock(stock);
+      writeCart([]);
+      renderCart();
+      cartNote('Carrito vaciado. Vuelve al catálogo cuando quieras.');
+    });
+  }
+
+  // Precargar usuario autenticado de la sesión si existe
+  (function preloadUser() {
+    var user = readJSON(USER_KEY, null);
+    if (!user || !form) return;
+    if (user.name && form.elements['name']) form.elements['name'].value = user.name;
+    if (user.phone && form.elements['phone']) form.elements['phone'].value = user.phone;
+    if (user.address && form.elements['address']) form.elements['address'].value = user.address;
+  })();
+
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var cart = readCart();
+      if (!cart.length) { checkoutMsg('Tu carrito está vacío. Agrega algo del catálogo antes de confirmar.', true); return; }
+      var name = (form.elements['name'] ? form.elements['name'].value : '').trim();
+      var phone = (form.elements['phone'] ? form.elements['phone'].value : '').replace(/\D/g, '');
+      var address = (form.elements['address'] ? form.elements['address'].value : '').trim();
+      var delivery = form.elements['delivery'] ? form.elements['delivery'].value : 'domicilio';
+      var payment = form.elements['payment'] ? form.elements['payment'].value : 'efectivo';
+      var notes = (form.elements['notes'] ? form.elements['notes'].value : '').trim();
+
+      if (name.length < 3) { checkoutMsg('Escribe tu nombre completo para autenticar el checkout.', true); return; }
+      if (phone.length < 10) { checkoutMsg('Escribe un teléfono válido de 10 dígitos para confirmar tu pedido.', true); return; }
+      if (address.length < 8) { checkoutMsg('Escribe tu dirección completa en Campeche (calle, número y colonia).', true); return; }
+
+      // Checkout autenticado: guardar perfil de sesión
+      writeJSON(USER_KEY, { name: name, phone: phone, address: address });
+
+      var total = cartTotal(cart);
+      var orders = readOrders();
+      var folio = 'CAPO-01-' + String(orders.length + 1).padStart(4, '0');
+      var order = {
+        folio: folio,
+        code: PAYMENT_CODE,
+        paymentCode: PAYMENT_CODE,
+        items: cart.map(function (l) { return { id: l.id, name: l.name, price: Number(l.price), qty: Number(l.qty) }; }),
+        total: total,
+        customer: { name: name, phone: phone, address: address },
+        delivery: delivery,
+        payment: payment,
+        notes: notes,
+        status: 'pendiente',
+        createdAt: new Date().toISOString()
+      };
+      orders.push(order);
+      writeOrders(orders);
+      writeCart([]);
+
+      renderCart();
+      checkoutMsg('Pedido ' + folio + ' confirmado. Total ' + fmt(total) + '. Lo verás en Mis pedidos.');
+      if (successBox) {
+        successBox.hidden = false;
+        successBox.textContent = '✅ Pedido ' + folio + ' confirmado para ' + name + ' · Total ' + fmt(total) + ' · Código de pago 01 · ' + (delivery === 'domicilio' ? 'Llega a domicilio en menos de 30 min según ubicación.' : 'Listo para recoger en horario de servicio.') + ' Revisa Mis pedidos.';
+      }
+      if (payRef) {
+        payRef.textContent = 'Folio ' + folio + ' · Código 01 · Total ' + fmt(total) + ' · Menciona tu folio al pagar o recoger. Dudas: 981 133 2914.';
+      }
+      form.reset();
+      // Mantener datos autenticados tras reset
+      if (form.elements['name']) form.elements['name'].value = name;
+      if (form.elements['phone']) form.elements['phone'].value = phone;
+      if (form.elements['address']) form.elements['address'].value = address;
+    });
+  }
+
+  renderCart();
 })();
 </script>
 
