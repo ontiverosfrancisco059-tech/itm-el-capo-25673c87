@@ -3,352 +3,313 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EL CAPO | Comida rápida a domicilio en Campeche</title>
-<meta name="description" content="EL CAPO — Comida rápida a domicilio en Campeche. Tacos, pizzas, hamburguesas y más. Pedidos a domicilio en menos de 30 minutos según ubicación. Lun a Vie 7:00-21:00, Sáb 8:00-22:00, Dom 9:00-15:00. Tel 981 133 2914.">
+<title>EL CAPO - Comida rápida a domicilio en Campeche</title>
+<meta name="description" content="EL CAPO en Campeche. Comida rápida a domicilio o para comer en casa. Pedidos a domicilio en menos de 30 minutos según ubicación. Lun a Vie 7:00-21:00, Sáb 8:00-22:00, Dom 9:00-15:00. Tel 9811332914.">
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23ff6b00'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' font-family='Georgia' font-weight='bold'%3EC%3C/text%3E%3C/svg%3E">
 <style>
-:root{
-  --bg:#0e0906;
-  --bg2:#17100a;
-  --bg3:#201409;
-  --card:#1e140c;
-  --line:#3a2715;
-  --cream:#fff6e8;
-  --muted:#d8c3a5;
-  --dim:#a68d6d;
-  --amber:#ffb703;
-  --orange:#ff6b00;
-  --red:#e63900;
-  --green:#2ec4b6;
-  --radius:18px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-  background:
-    radial-gradient(900px 500px at 15% -5%, rgba(255,107,0,.18), transparent 60%),
-    radial-gradient(800px 500px at 95% 10%, rgba(255,183,3,.14), transparent 60%),
-    repeating-linear-gradient(0deg, rgba(255,255,255,.015) 0 2px, transparent 2px 6px),
-    var(--bg);
-  color:var(--cream);
-  line-height:1.6;
-}
+:root{--negro:#0e0703;--carbon:#1a100a;--madera:#2a1a0e;--fuego:#ff6b00;--maiz:#ffc107;--chile:#c1121f;--crema:#fff3e0;--crema2:#f5d7a1;--verde:#2a9d3a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--negro);color:var(--crema);font-family:Georgia,'Times New Roman',serif;line-height:1.6;background-image:radial-gradient(circle at 20% 10%,rgba(255,107,0,.12),transparent 40%),radial-gradient(circle at 90% 90%,rgba(193,18,31,.14),transparent 40%),repeating-linear-gradient(45deg,rgba(255,255,255,.015) 0 2px,transparent 2px 8px)}
 a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-/* top bar */
-.topbar{
-  position:sticky;top:0;z-index:50;
-  background:rgba(14,9,6,.92);
-  backdrop-filter:blur(10px);
-  border-bottom:2px solid var(--line);
-}
-.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.logo{
-  width:48px;height:48px;border-radius:14px;display:grid;place-items:center;
-  background:linear-gradient(135deg,var(--orange),var(--red));
-  border:2px solid #ffd166;
-  font-weight:900;font-size:22px;letter-spacing:.5px;
-  box-shadow:0 6px 22px rgba(255,107,0,.35);
-}
-.brand b{display:block;line-height:1;font-size:20px;letter-spacing:2px}
-.brand small{display:block;color:var(--amber);font-size:11px;letter-spacing:2.5px;font-weight:700}
-.nav{display:flex;gap:18px;align-items:center;font-size:14px;font-weight:600}
-.nav a{text-decoration:none;color:var(--muted)}
-.nav a:hover{color:var(--amber)}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  padding:13px 22px;border-radius:999px;font-weight:800;text-decoration:none;
-  border:2px solid transparent;cursor:pointer;font-size:15px;
-}
-.btn-primary{background:linear-gradient(135deg,var(--amber),var(--orange));color:#1a0e00;box-shadow:0 8px 28px rgba(255,107,0,.4)}
-.btn-primary:hover{filter:brightness(1.07);transform:translateY(-1px)}
-.btn-ghost{border-color:var(--line);color:var(--cream);background:rgba(255,255,255,.04)}
-.btn-ghost:hover{border-color:var(--amber)}
-.btn-sm{padding:9px 16px;font-size:13px}
-@media(max-width:820px){.nav .hide-m{display:none}}
-/* hero */
-.hero{padding:48px 0 28px;position:relative;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
-.badge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:#241505;border:1px solid #6b4420;color:#ffd166;
-  padding:7px 14px;border-radius:999px;font-size:12.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;
-}
-.badge .dot{width:9px;height:9px;border-radius:50%;background:#3ddc84;box-shadow:0 0 0 6px rgba(61,220,132,.18);animation:pulse 1.8s infinite}
-@keyframes pulse{50%{box-shadow:0 0 0 9px rgba(61,220,132,.08)}}
-h1{font-size:clamp(38px,6vw,62px);line-height:.95;margin:16px 0 12px;letter-spacing:-1px}
-h1 .stroke{color:transparent;-webkit-text-stroke:2px var(--amber)}
-h1 .fire{background:linear-gradient(90deg,#ffd166,#ff6b00,#ff2e00);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{color:var(--muted);font-size:clamp(15px,2vw,18px);max-width:52ch}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
-.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
-.chip{background:rgba(255,183,3,.1);border:1px dashed #7a5426;border-radius:12px;padding:8px 12px;font-size:13px;color:#ffe3a3}
-.chip strong{color:#fff}
-/* ticket card */
-.ticket{
-  background:linear-gradient(180deg,#fff6e8,#ffe9c4);
-  color:#241203;border-radius:20px;overflow:hidden;
-  border:3px solid #0e0906;outline:3px solid #ffb703;
-  box-shadow:0 24px 60px rgba(0,0,0,.55);
-  transform:rotate(1.2deg);
-}
-.ticket-top{background:#1a0e00;color:#ffd166;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;font-weight:900;letter-spacing:1.5px;font-size:13px}
-.ticket-body{padding:20px}
-.ticket-body h3{margin:0 0 6px;font-size:24px;line-height:1.1}
-.ticket-body p{margin:0;color:#6b4a24;font-size:14px}
-.order-list{margin:14px 0;padding:0;list-style:none}
-.order-list li{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:2px dashed #d8b67a;font-weight:700;font-size:14px}
-.order-list li span:last-child{background:#1a0e00;color:#ffd166;padding:2px 10px;border-radius:999px;font-size:12px}
-.ticket-total{display:flex;justify-content:space-between;align-items:center;margin:14px 0 4px;font-weight:900}
-.ticket-note{background:#1a0e00;color:#ffe3a3;border-radius:12px;padding:12px 14px;font-size:13px;margin-top:12px}
-.torn{height:14px;background:radial-gradient(circle at 10px -3px, transparent 12px, #0e0906 13px);background-size:20px 14px;opacity:.15}
-/* marquee */
-.marquee{border-top:2px solid var(--line);border-bottom:2px solid var(--line);background:#120b05;overflow:hidden;white-space:nowrap;padding:10px 0;margin:18px 0 0;color:#ffd166;font-weight:900;letter-spacing:2px;font-size:13px;text-transform:uppercase}
-.marquee span{padding:0 18px}
-/* sections */
-section.block{padding:44px 0}
-.kicker{color:var(--amber);font-weight:900;letter-spacing:2.5px;font-size:12px;text-transform:uppercase}
-h2{font-size:clamp(26px,4vw,38px);margin:8px 0 10px;line-height:1.05}
-.sub{color:var(--muted);max-width:66ch;margin:0}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.topbar{background:#000;border-bottom:3px solid var(--fuego);padding:.6rem 1rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:space-between;font-family:Verdana,Arial,sans-serif;font-size:.86rem}
+.topbar strong{color:var(--maiz)}
+.topbar a.tel{background:var(--fuego);color:#000;font-weight:800;text-decoration:none;padding:.4rem .9rem;border-radius:999px;border:2px solid var(--maiz)}
+header.nav{position:sticky;top:0;z-index:20;background:rgba(14,7,3,.96);border-bottom:2px dashed rgba(255,193,7,.5);padding:.8rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.logo-mark{width:52px;height:52px;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--maiz),var(--fuego) 55%,var(--chile) 100%);display:grid;place-items:center;font-weight:900;color:#000;font-size:1.4rem;border:3px solid var(--crema);box-shadow:0 0 0 3px var(--chile)}
+.logo b{font-size:1.5rem;letter-spacing:2px;color:var(--maiz)}
+.logo small{display:block;font-family:Verdana,sans-serif;font-size:.68rem;letter-spacing:1px;color:var(--crema2)}
+nav.links{display:flex;flex-wrap:wrap;gap:.5rem}
+nav.links a{font-family:Verdana,sans-serif;font-size:.84rem;text-decoration:none;border:1px solid rgba(255,243,224,.4);padding:.45rem .8rem;border-radius:8px}
+nav.links a.cta{background:var(--maiz);color:#000;font-weight:800;border-color:var(--maiz)}
+.hero{max-width:1150px;margin:0 auto;padding:3rem 1.2rem 2rem;display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr}}
+.eyebrow{display:inline-block;background:var(--chile);color:var(--crema);font-family:Verdana,sans-serif;font-size:.75rem;letter-spacing:2px;padding:.35rem .8rem;border-radius:4px;border:1px solid var(--maiz);margin-bottom:1rem}
+h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:.95;color:var(--maiz);text-shadow:3px 3px 0 var(--chile),6px 6px 0 #000;margin:.3rem 0 1rem}
+h1 span{color:var(--crema)}
+.hero p.lead{font-size:1.15rem;color:var(--crema2);max-width:34rem}
+.badges{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.2rem 0;font-family:Verdana,sans-serif;font-size:.8rem}
+.badges span{border:2px solid var(--fuego);border-radius:999px;padding:.35rem .8rem;background:rgba(255,107,0,.12)}
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.2rem}
+.btn{font-family:Verdana,sans-serif;font-weight:800;text-decoration:none;padding:.9rem 1.3rem;border-radius:12px;display:inline-block;border:3px solid #000}
+.btn-primary{background:var(--fuego);color:#000;box-shadow:4px 4px 0 var(--maiz)}
+.btn-secondary{background:var(--crema);color:#1a100a;box-shadow:4px 4px 0 var(--chile)}
+.btn-ghost{background:transparent;color:var(--maiz);border-color:var(--maiz)}
+.hero-card{background:linear-gradient(180deg,#2a1a0e,#140b05);border:3px solid var(--maiz);border-radius:18px;padding:1.4rem;box-shadow:8px 8px 0 rgba(193,18,31,.6)}
+.hero-card h2{color:var(--maiz);font-size:1.3rem;margin-bottom:.6rem}
+.hero-card ul{list-style:none;font-family:Verdana,sans-serif;font-size:.9rem;display:grid;gap:.6rem;margin:.8rem 0}
+.hero-card li{background:rgba(255,243,224,.07);border:1px dashed rgba(255,193,7,.6);border-radius:10px;padding:.6rem .8rem}
+.hero-card li b{color:var(--maiz)}
+.ticker{background:var(--maiz);color:#000;font-family:Verdana,sans-serif;font-weight:800;overflow:hidden;white-space:nowrap;border-top:3px solid #000;border-bottom:3px solid #000;padding:.5rem 0}
+.ticker span{display:inline-block;padding-left:1rem;animation:scroll 22s linear infinite}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+section.block{max-width:1150px;margin:0 auto;padding:2.5rem 1.2rem}
+.sec-title{font-size:clamp(1.7rem,3.5vw,2.5rem);color:var(--maiz);margin-bottom:.4rem;text-shadow:2px 2px 0 #000}
+.sec-sub{color:var(--crema2);margin-bottom:1.5rem;max-width:46rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 @media(max-width:860px){.grid3{grid-template-columns:1fr}}
-.card{
-  background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02)),var(--card);
-  border:2px solid var(--line);border-radius:var(--radius);padding:20px;position:relative;
-}
-.card:hover{border-color:#7a5426}
-.card .icon{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-size:22px;background:#2a1a0c;border:1px solid #5a3d1e}
-.card h3{margin:12px 0 6px;font-size:19px}
-.card p{margin:0;color:var(--muted);font-size:14.5px}
-.card .tag{position:absolute;top:14px;right:14px;font-size:11px;font-weight:900;letter-spacing:1px;background:var(--amber);color:#1a0e00;padding:4px 10px;border-radius:999px}
-/* menu preview */
-.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
-@media(max-width:900px){.menu-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.menu-grid{grid-template-columns:1fr}}
-.dish{border-radius:18px;overflow:hidden;border:2px solid var(--line);background:#160e07}
-.dish-top{height:132px;display:grid;place-items:center;font-size:64px;position:relative;border-bottom:2px solid var(--line)}
-.dish-top small{position:absolute;left:12px;top:12px;background:rgba(0,0,0,.65);border:1px solid #6b4420;color:#ffd166;font-size:11px;font-weight:800;padding:4px 10px;border-radius:999px;letter-spacing:.8px}
-.d1{background:radial-gradient(circle at 50% 30%,#ff9a3d,#7a2d00 70%),repeating-linear-gradient(45deg,rgba(0,0,0,.12) 0 10px,transparent 10px 20px)}
-.d2{background:radial-gradient(circle at 50% 30%,#ffd166,#8a4b00 75%),repeating-linear-gradient(-45deg,rgba(0,0,0,.12) 0 10px,transparent 10px 20px)}
-.d3{background:radial-gradient(circle at 50% 30%,#ff6b6b,#5c1500 72%),repeating-linear-gradient(0deg,rgba(0,0,0,.14) 0 8px,transparent 8px 16px)}
-.d4{background:radial-gradient(circle at 50% 30%,#f4e3b2,#6b3d10 75%)}
-.d5{background:radial-gradient(circle at 50% 30%,#ffe066,#7a3d00 75%)}
-.d6{background:radial-gradient(circle at 50% 30%,#90e0a0,#123f22 75%)}
-.dish-body{padding:16px}
-.dish-body h3{margin:0;font-size:18px}
-.dish-body p{margin:6px 0 12px;color:var(--muted);font-size:13.8px}
-.dish-foot{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.price{font-weight:900;color:#ffd166}
-.link{color:var(--amber);font-weight:800;font-size:13.5px;text-decoration:none;border-bottom:2px dotted var(--amber)}
-.center{ text-align:center;margin-top:24px}
-/* steps */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
-@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
-@media(max-width:540px){.steps{grid-template-columns:1fr}}
-.step{background:#120b05;border:2px solid var(--line);border-radius:16px;padding:18px}
-.step b.num{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--amber);color:#1a0e00;font-weight:900}
-.step h3{margin:10px 0 6px;font-size:16px}
-.step p{margin:0;color:var(--muted);font-size:13.8px}
-.step a{color:#ffd166}
-/* info */
-.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
-@media(max-width:900px){.info-grid{grid-template-columns:1fr}}
-.panel{background:var(--card);border:2px solid var(--line);border-radius:var(--radius);padding:22px}
-.hours{width:100%;border-collapse:collapse;margin-top:12px;font-size:14px}
-.hours td{padding:10px 6px;border-bottom:1px solid #33220f}
-.hours td:last-child{text-align:right;font-weight:800;color:#ffd166}
-.open-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(61,220,132,.12);border:1px solid #1f7a5a;color:#7bf0c4;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:800}
-.map{border-radius:14px;overflow:hidden;border:2px solid #33220f;background:#000;min-height:280px}
-.map iframe{width:100%;height:320px;border:0;display:block;filter:saturate(1.1)}
-.contact-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-/* footer */
-footer{border-top:2px solid var(--line);background:#0a0603;padding:28px 0 40px;margin-top:20px}
-.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:flex-start}
-.foot p{color:var(--dim);font-size:13px;max-width:52ch}
-.foot nav{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;font-weight:700}
-.foot nav a{color:var(--muted);text-decoration:none}
-.whats{position:fixed;right:18px;bottom:18px;z-index:60;background:#25d366;color:#06351d;font-weight:900;text-decoration:none;padding:14px 18px;border-radius:999px;box-shadow:0 12px 32px rgba(0,0,0,.5);border:3px solid #06351d}
+.card{background:#1e130b;border:2px solid rgba(255,193,7,.5);border-radius:16px;padding:1.2rem;box-shadow:5px 5px 0 #000}
+.card h3{color:var(--maiz);margin-bottom:.4rem}
+.card p{font-size:.96rem;color:var(--crema2)}
+.card .num{font-size:2rem}
+.valor{background:linear-gradient(180deg,rgba(193,18,31,.18),transparent);border-top:2px solid rgba(255,193,7,.3);border-bottom:2px solid rgba(255,193,7,.3)}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media(max-width:860px){.menu-grid{grid-template-columns:1fr}}
+.dish{border-radius:16px;overflow:hidden;background:#221408;border:3px solid var(--fuego)}
+.dish-top{height:170px;display:grid;place-items:center;font-size:4rem;background:radial-gradient(circle at 50% 30%,#4a260f,#140b05 70%),repeating-linear-gradient(0deg,rgba(255,193,7,.08) 0 6px,transparent 6px 12px);border-bottom:3px solid var(--maiz)}
+.dish-body{padding:1rem 1.1rem 1.2rem}
+.dish-body h3{color:var(--maiz);font-size:1.25rem}
+.dish-body p{color:var(--crema2);font-size:.92rem;margin:.4rem 0 .9rem}
+.tag{display:inline-block;font-family:Verdana,sans-serif;font-size:.7rem;background:var(--chile);padding:.2rem .6rem;border-radius:999px;margin-right:.4rem;border:1px solid var(--maiz)}
+.price{font-family:Verdana,sans-serif;font-weight:800;color:var(--maiz);font-size:1.05rem}
+.dish-link{display:inline-block;margin-top:.8rem;font-family:Verdana,sans-serif;font-size:.84rem;font-weight:800;color:#000;background:var(--crema);text-decoration:none;padding:.55rem .9rem;border-radius:9px;border:2px solid #000}
+.negocio{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+@media(max-width:900px){.negocio{grid-template-columns:1fr}}
+.info-box{background:#160d06;border:2px solid rgba(255,243,224,.25);border-radius:16px;padding:1.3rem}
+.info-box dt{font-family:Verdana,sans-serif;font-size:.75rem;letter-spacing:1px;color:var(--maiz);margin-top:.9rem}
+.info-box dd{font-size:1rem}
+.horario{width:100%;border-collapse:collapse;margin-top:.7rem;font-family:Verdana,sans-serif;font-size:.88rem}
+.horario th,.horario td{border:1px solid rgba(255,193,7,.4);padding:.5rem .6rem;text-align:left}
+.horario th{background:rgba(255,107,0,.2);color:var(--maiz)}
+.map-wrap{border:3px solid var(--maiz);border-radius:16px;overflow:hidden;min-height:340px;background:#000}
+.map-wrap iframe{width:100%;height:420px;border:0;display:block}
+.tienda-acceso{background:linear-gradient(180deg,#2a1206,#0e0703);border:3px solid var(--chile);border-radius:20px;padding:1.6rem;display:grid;grid-template-columns:1.2fr .8fr;gap:1.2rem;align-items:center}
+@media(max-width:860px){.tienda-acceso{grid-template-columns:1fr}}
+.tienda-acceso h2{color:var(--maiz);font-size:1.8rem}
+.store-links{display:grid;gap:.7rem}
+.store-links a{display:flex;justify-content:space-between;align-items:center;text-decoration:none;background:var(--crema);color:#111;padding:.85rem 1rem;border-radius:12px;font-family:Verdana,sans-serif;font-weight:800;border:3px solid #000}
+.store-links a.alt{background:var(--fuego)}
+footer{border-top:3px solid var(--fuego);margin-top:2rem;background:#000;padding:2rem 1.2rem;font-family:Verdana,sans-serif;font-size:.86rem}
+.foot{max-width:1150px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+@media(max-width:800px){.foot{grid-template-columns:1fr}}
+footer h4{color:var(--maiz);margin-bottom:.5rem}
+footer a{color:var(--crema2)}
 </style>
 </head>
 <body>
 
-<header class="topbar">
-  <div class="wrap topbar-inner">
-    <a class="brand" href="index.html" aria-label="EL CAPO inicio" data-eb-editable="link" data-eb-key="index.a.1" data-eb-role="a" data-eb-kind="link">
-      <span class="logo" aria-hidden="true">C</span>
-      <span><b>EL CAPO</b><small>COMIDA RÁPIDA • CAMPECHE</small></span>
-    </a>
-    <nav class="nav" aria-label="Navegación principal">
-      <a class="hide-m" href="#propuesta" data-eb-editable="link" data-eb-key="index.a.2" data-eb-role="a" data-eb-kind="link">Propuesta</a>
-      <a class="hide-m" href="#menu" data-eb-editable="link" data-eb-key="index.a.3" data-eb-role="a" data-eb-kind="link">Menú</a>
-      <a class="hide-m" href="#como-pedir" data-eb-editable="link" data-eb-key="index.a.4" data-eb-role="a" data-eb-kind="link">Cómo pedir</a>
-      <a class="hide-m" href="#contacto" data-eb-editable="link" data-eb-key="index.a.5" data-eb-role="a" data-eb-kind="link">Contacto</a>
-      <a class="btn btn-primary btn-sm" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.6" data-eb-role="a" data-eb-kind="link">Ver tienda</a>
-    </nav>
-  </div>
+<div class="topbar">
+  <div>📍 Campeche, México &nbsp;•&nbsp; <strong>EL CAPO — Comida rápida a domicilio</strong> &nbsp;•&nbsp; Lun a Vie 7:00–21:00 · Sáb 8:00–22:00 · Dom 9:00–15:00</div>
+  <a class="tel" href="tel:+529811332914" data-eb-editable="link" data-eb-key="index.a.1" data-eb-role="a" data-eb-kind="link">📞 981 133 2914</a>
+</div>
+
+<header class="nav">
+  <a class="logo" href="index.html" aria-label="EL CAPO inicio" data-eb-editable="link" data-eb-key="index.a.2" data-eb-role="a" data-eb-kind="link">
+    <span class="logo-mark">C</span>
+    <span><b>EL CAPO</b><small>COMIDA RÁPIDA · CAMPECHE</small></span>
+  </a>
+  <nav class="links" aria-label="Navegación principal">
+    <a href="#hero" data-eb-editable="link" data-eb-key="index.a.3" data-eb-role="a" data-eb-kind="link">Inicio</a>
+    <a href="#valor" data-eb-editable="link" data-eb-key="index.a.4" data-eb-role="a" data-eb-kind="link">Nosotros</a>
+    <a href="#menu-destacado" data-eb-editable="link" data-eb-key="index.a.5" data-eb-role="a" data-eb-kind="link">Menú</a>
+    <a href="#negocio" data-eb-editable="link" data-eb-key="index.a.6" data-eb-role="a" data-eb-kind="link">Horario y ubicación</a>
+    <a class="cta" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.7" data-eb-role="a" data-eb-kind="link">Ir a la tienda →</a>
+  </nav>
 </header>
 
 <main>
   <!-- HERO -->
-  <div class="wrap hero">
-    <div class="hero-grid">
-      <div>
-        <span class="badge"><span class="dot"></span> Abierto hoy • A domicilio en Campeche</span>
-        <h1 data-eb-editable="text" data-eb-key="index.h1.7" data-eb-role="h1" data-eb-kind="text">COMIDA RÁPIDA <span class="stroke">DE VERDAD</span> <span class="fire">A DOMICILIO.</span></h1>
-        <p class="lead" data-eb-editable="text" data-eb-key="index.p.8" data-eb-role="p" data-eb-kind="text"><strong style="color:#fff">EL CAPO</strong> vende comida rápida a domicilio o para comer en casa: tacos, pizzas, hamburguesas y antojos bien servidos. Entra, elige tu favorito en la tienda y haz tu pedido sin vueltas.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-primary" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.9" data-eb-role="a" data-eb-kind="link">🍔 Ver menú y pedir</a>
-          <a class="btn btn-ghost" href="https://wa.me/529811332914?text=Hola%20EL%20CAPO%2C%20tengo%20una%20duda%20sobre%20el%20men%C3%BA" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.10" data-eb-role="a" data-eb-kind="link">Dudas por WhatsApp • 981 133 2914</a>
-        </div>
-        <div class="hero-meta">
-          <span class="chip">⚡ <strong>Entrega &lt; 30 min</strong> según ubicación</span>
-          <span class="chip">📍 <strong>Campeche</strong>, México</span>
-          <span class="chip">🕒 <strong>Hoy:</strong> <span id="today-hours">ver horario</span></span>
-        </div>
+  <section class="hero" id="hero">
+    <div>
+      <span class="eyebrow">🔥 SABOR CALLEJERO · HECHO AL MOMENTO</span>
+      <h1 data-eb-editable="text" data-eb-key="index.h1.8" data-eb-role="h1" data-eb-kind="text">EL CAPO <span>MANDA EN CAMPECHE</span></h1>
+      <p class="lead" data-eb-editable="text" data-eb-key="index.p.9" data-eb-role="p" data-eb-kind="text">Nos dedicamos a vender <strong>comida rápida a domicilio o para comer en casa</strong>. Entra a la página, elige tu antojo del menú y haz tu pedido para recoger o recibir en tu puerta.</p>
+      <div class="badges">
+        <span>⏱️ A domicilio en menos de 30 min*</span>
+        <span>🛵 Clientes locales</span>
+        <span>🍔🍕🌮 Comida rápida</span>
       </div>
-      <div class="ticket" role="img" aria-label="Ticket de pedido EL CAPO">
-        <div class="ticket-top"><span>★ EL CAPO ★</span><span>No. 001-CAPO</span></div>
-        <div class="ticket-body">
-          <h3 data-eb-editable="text" data-eb-key="index.h3.11" data-eb-role="h3" data-eb-kind="text">Tu pedido en 3 pasos</h3>
-          <p data-eb-editable="text" data-eb-key="index.p.12" data-eb-role="p" data-eb-kind="text">Sin registros complicados. Entras a la tienda, eliges y confirmas.</p>
-          <ul class="order-list">
-            <li><span>🌮 2x Tacos campechanos</span><span>ELEGIR</span></li>
-            <li><span>🍕 1x Pizza capo especial</span><span>ELEGIR</span></li>
-            <li><span>🍟 1x Papas sazonadas</span><span>ELEGIR</span></li>
-          </ul>
-          <div class="ticket-total"><span>TOTAL ESTIMADO TIENDA</span><span>→ Ver precios</span></div>
-          <div class="torn"></div>
-          <div class="ticket-note">📦 <strong>A domicilio o para recoger.</strong> El pago y la confirmación se hacen dentro de la tienda. <a style="color:#ffd166;font-weight:800" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.13" data-eb-role="a" data-eb-kind="link">Entrar a la tienda →</a></div>
-        </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#menu-destacado" data-eb-editable="link" data-eb-key="index.a.10" data-eb-role="a" data-eb-kind="link">Ver menú destacado</a>
+        <a class="btn btn-secondary" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.11" data-eb-role="a" data-eb-kind="link">Ir a la tienda</a>
+        <a class="btn btn-ghost" href="tel:+529811332914" data-eb-editable="link" data-eb-key="index.a.12" data-eb-role="a" data-eb-kind="link">Llamar 981 133 2914</a>
       </div>
+      <p style="margin-top:.9rem;font-size:.82rem;color:var(--crema2);font-family:Verdana,sans-serif" data-eb-editable="text" data-eb-key="index.p.13" data-eb-role="p" data-eb-kind="text">*Tiempo estimado dependiendo de tu ubicación en Campeche. Pregunta cobertura por teléfono.</p>
     </div>
+    <aside class="hero-card" aria-label="Pide en 3 pasos">
+      <h2 data-eb-editable="text" data-eb-key="index.h2.14" data-eb-role="h2" data-eb-kind="text">🍽️ ¿Cómo pedir en EL CAPO?</h2>
+      <ul>
+        <li><b>1. Mira el menú:</b> revisa los destacados aquí abajo, sin compromiso.</li>
+        <li><b>2. Entra a la tienda:</b> elige tu producto en el catálogo completo.</li>
+        <li><b>3. Recibe o recoge:</b> a domicilio en Campeche o para comer en casa.</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.15" data-eb-role="a" data-eb-kind="link">Catálogo completo</a>
+        <a class="btn btn-secondary" href="#negocio" data-eb-editable="link" data-eb-key="index.a.16" data-eb-role="a" data-eb-kind="link">Dónde estamos</a>
+      </div>
+      <p style="margin-top:.8rem;font-family:Verdana,sans-serif;font-size:.8rem;color:var(--crema2)" data-eb-editable="text" data-eb-key="index.p.17" data-eb-role="p" data-eb-kind="text">📞 Pedidos y dudas: <a href="tel:+529811332914" style="color:var(--maiz)" data-eb-editable="link" data-eb-key="index.a.18" data-eb-role="a" data-eb-kind="link">981 133 2914</a></p>
+    </aside>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><span>🔥 EL CAPO CAMPECHE · PEDIDOS A DOMICILIO EN MENOS DE 30 MINUTOS* · HAMBURGUESAS · PIZZAS · TACOS · TORTAS · ALITAS · PAPAS · REFRESCOS · 🔥 EL CAPO CAMPECHE · PEDIDOS A DOMICILIO EN MENOS DE 30 MINUTOS* · HAMBURGUESAS · PIZZAS · TACOS · TORTAS · ALITAS · PAPAS · REFRESCOS ·&nbsp;</span></div>
+
+  <!-- VALOR -->
+  <div class="valor">
+    <section class="block" id="valor">
+      <h2 class="sec-title" data-eb-editable="text" data-eb-key="index.h2.19" data-eb-role="h2" data-eb-kind="text">⚡ Pedidos a domicilio en menos de 30 minutos</h2>
+      <p class="sec-sub" data-eb-editable="text" data-eb-key="index.p.20" data-eb-role="p" data-eb-kind="text">Nuestra promesa es clara: <strong>rapidez sin perder sabor</strong>. Preparamos al momento para clientes locales que quieren comida rápida, caliente y abundante. El tiempo final depende de tu ubicación, pero siempre te avisamos antes de confirmar.</p>
+      <div class="grid3">
+        <div class="card"><div class="num">🛵</div><h3 data-eb-editable="text" data-eb-key="index.h3.21" data-eb-role="h3" data-eb-kind="text">Rápidos de verdad</h3><p data-eb-editable="text" data-eb-key="index.p.22" data-eb-role="p" data-eb-kind="text">Reparto local en Campeche. Si estás cerca, tu comida llega calientita en menos de 30 minutos.</p></div>
+        <div class="card"><div class="num">🔥</div><h3 data-eb-editable="text" data-eb-key="index.h3.23" data-eb-role="h3" data-eb-kind="text">Hecho al momento</h3><p data-eb-editable="text" data-eb-key="index.p.24" data-eb-role="p" data-eb-kind="text">Nada recalentado. Cocina artesanal de barrio: plancha, freidora y horno siempre encendidos en horario de servicio.</p></div>
+        <div class="card"><div class="num">🏠</div><h3 data-eb-editable="text" data-eb-key="index.h3.25" data-eb-role="h3" data-eb-kind="text">A domicilio o para llevar</h3><p data-eb-editable="text" data-eb-key="index.p.26" data-eb-role="p" data-eb-kind="text">Pide para tu casa, tu trabajo o pasa a recoger. Tú eliges cómo disfrutar EL CAPO.</p></div>
+      </div>
+    </section>
   </div>
 
-  <div class="marquee" aria-hidden="true"><span>TACOS • PIZZAS • HAMBURGUESAS • TORTAS • PAPAS • BEBIDAS • A DOMICILIO • TACOS • PIZZAS • HAMBURGUESAS • TORTAS • PAPAS • BEBIDAS • A DOMICILIO •</span></div>
-
-  <!-- PROPUESTA DE VALOR -->
-  <section class="wrap block" id="propuesta">
-    <div class="kicker">Por qué EL CAPO</div>
-    <h2 data-eb-editable="text" data-eb-key="index.h2.14" data-eb-role="h2" data-eb-kind="text">Pedidos a domicilio en menos de 30 minutos*</h2>
-    <p class="sub" data-eb-editable="text" data-eb-key="index.p.15" data-eb-role="p" data-eb-kind="text">*Dependiendo de tu ubicación en Campeche. Para clientes locales y para quienes quieren comida rápida sin salir de casa: caliente, rápida y bien servida. <strong style="color:#fff">Tú entras a la página, eliges algún producto y compras.</strong></p>
-    <div class="grid3">
-      <article class="card"><span class="tag">30 MIN</span><div class="icon">🛵</div><h3 data-eb-editable="text" data-eb-key="index.h3.16" data-eb-role="h3" data-eb-kind="text">A domicilio rapidísimo</h3><p data-eb-editable="text" data-eb-key="index.p.17" data-eb-role="p" data-eb-kind="text">Reparto local enfocado en velocidad. Pedido caliente en menos de 30 minutos según tu zona.</p></article>
-      <article class="card"><div class="icon">🔥</div><h3 data-eb-editable="text" data-eb-key="index.h3.18" data-eb-role="h3" data-eb-kind="text">Hecho al momento, estilo artesanal</h3><p data-eb-editable="text" data-eb-key="index.p.19" data-eb-role="p" data-eb-kind="text">Visual oscuro, sabor casero y porciones generosas. Nada recalentado: todo sale de plancha y horno.</p></article>
-      <article class="card"><div class="icon">📱</div><h3 data-eb-editable="text" data-eb-key="index.h3.20" data-eb-role="h3" data-eb-kind="text">Pide desde la tienda</h3><p data-eb-editable="text" data-eb-key="index.p.21" data-eb-role="p" data-eb-kind="text">Todo el menú está en la tienda: elige, arma tu carrito y sigue tu pedido ahí mismo. <a class="link" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.22" data-eb-role="a" data-eb-kind="link">Ir a la tienda</a></p></article>
-    </div>
-  </section>
-
-  <!-- MENU PREVIEW -->
-  <section class="wrap block" id="menu" style="padding-top:0">
-    <div class="kicker">Nuestro menú</div>
-    <h2 data-eb-editable="text" data-eb-key="index.h2.23" data-eb-role="h2" data-eb-kind="text">Lo más pedido por los capos</h2>
-    <p class="sub" data-eb-editable="text" data-eb-key="index.p.24" data-eb-role="p" data-eb-kind="text">Una probadita. Los productos, precios, fotos y disponibilidad están en la tienda. Toca cualquier categoría para ver el catálogo completo.</p>
+  <!-- MENU DESTACADO -->
+  <section class="block" id="menu-destacado">
+    <h2 class="sec-title" data-eb-editable="text" data-eb-key="index.h2.27" data-eb-role="h2" data-eb-kind="text">🍔 Menú destacado de la casa</h2>
+    <p class="sec-sub" data-eb-editable="text" data-eb-key="index.p.28" data-eb-role="p" data-eb-kind="text">Una probadita de lo que más piden nuestros clientes. Para ver precios, fotos y todo el menú, entra al catálogo completo en la tienda. <strong>Esta sección es solo para antojarte: la compra se hace en la tienda.</strong></p>
     <div class="menu-grid">
-      <article class="dish"><div class="dish-top d1"><small>🌮 TACOS</small><span>🌮</span></div><div class="dish-body"><h3 data-eb-editable="text" data-eb-key="index.h3.25" data-eb-role="h3" data-eb-kind="text">Tacos campechanos</h3><p data-eb-editable="text" data-eb-key="index.p.26" data-eb-role="p" data-eb-kind="text">De bistec, pastor, chorizo y campechano con salsa de la casa.</p><div class="dish-foot"><span class="price">Ver precio →</span><a class="link" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.27" data-eb-role="a" data-eb-kind="link">Ver en tienda</a></div></div></article>
-      <article class="dish"><div class="dish-top d2"><small>🍕 PIZZAS</small><span>🍕</span></div><div class="dish-body"><h3 data-eb-editable="text" data-eb-key="index.h3.28" data-eb-role="h3" data-eb-kind="text">Pizzas El Suspiro / Capo</h3><p data-eb-editable="text" data-eb-key="index.p.29" data-eb-role="p" data-eb-kind="text">Masa artesanal, queso abundante y especialidades para compartir.</p><div class="dish-foot"><span class="price">Ver precio →</span><a class="link" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.30" data-eb-role="a" data-eb-kind="link">Ver en tienda</a></div></div></article>
-      <article class="dish"><div class="dish-top d3"><small>🍔 BURGERS</small><span>🍔</span></div><div class="dish-body"><h3 data-eb-editable="text" data-eb-key="index.h3.31" data-eb-role="h3" data-eb-kind="text">Hamburguesas dobles</h3><p data-eb-editable="text" data-eb-key="index.p.32" data-eb-role="p" data-eb-kind="text">Carne jugosa, pan brioche, tocino y aderezo capo.</p><div class="dish-foot"><span class="price">Ver precio →</span><a class="link" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.33" data-eb-role="a" data-eb-kind="link">Ver en tienda</a></div></div></article>
-      <article class="dish"><div class="dish-top d4"><small>🥪 TORTAS</small><span>🥪</span></div><div class="dish-body"><h3 data-eb-editable="text" data-eb-key="index.h3.34" data-eb-role="h3" data-eb-kind="text">Tortas gigantes</h3><p data-eb-editable="text" data-eb-key="index.p.35" data-eb-role="p" data-eb-kind="text">Milanesa, cubana y hawaiana para el hambre seria.</p><div class="dish-foot"><span class="price">Ver precio →</span><a class="link" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.36" data-eb-role="a" data-eb-kind="link">Ver en tienda</a></div></div></article>
-      <article class="dish"><div class="dish-top d5"><small>🍟 COMPLEMENTOS</small><span>🍟</span></div><div class="dish-body"><h3 data-eb-editable="text" data-eb-key="index.h3.37" data-eb-role="h3" data-eb-kind="text">Papas y alitas</h3><p data-eb-editable="text" data-eb-key="index.p.38" data-eb-role="p" data-eb-kind="text">Papas sazonadas, aros de cebolla y alitas picosas.</p><div class="dish-foot"><span class="price">Ver precio →</span><a class="link" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.39" data-eb-role="a" data-eb-kind="link">Ver en tienda</a></div></div></article>
-      <article class="dish"><div class="dish-top d6"><small>🥤 BEBIDAS</small><span>🥤</span></div><div class="dish-body"><h3 data-eb-editable="text" data-eb-key="index.h3.40" data-eb-role="h3" data-eb-kind="text">Refrescos y aguas</h3><p data-eb-editable="text" data-eb-key="index.p.41" data-eb-role="p" data-eb-kind="text">Bien frías para acompañar. Pregunta por el 2x1 del día.</p><div class="dish-foot"><span class="price">Ver precio →</span><a class="link" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.42" data-eb-role="a" data-eb-kind="link">Ver en tienda</a></div></div></article>
+      <article class="dish">
+        <div class="dish-top" aria-hidden="true">🍔</div>
+        <div class="dish-body">
+          <span class="tag">La favorita</span><span class="tag">Plancha</span>
+          <h3 data-eb-editable="text" data-eb-key="index.h3.29" data-eb-role="h3" data-eb-kind="text">Hamburguesa El Capo</h3>
+          <p data-eb-editable="text" data-eb-key="index.p.30" data-eb-role="p" data-eb-kind="text">Carne jugosa, queso fundido, tocino crujiente, papas sazonadas y aderezo de la casa. La reina del barrio.</p>
+          <div class="price">Ver precio en tienda</div>
+          <a class="dish-link" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.31" data-eb-role="a" data-eb-kind="link">Ver en catálogo →</a>
+        </div>
+      </article>
+      <article class="dish">
+        <div class="dish-top" aria-hidden="true">🍕</div>
+        <div class="dish-body">
+          <span class="tag">Familiar</span><span class="tag">Horno</span>
+          <h3 data-eb-editable="text" data-eb-key="index.h3.32" data-eb-role="h3" data-eb-kind="text">Pizza Artesanal</h3>
+          <p data-eb-editable="text" data-eb-key="index.p.33" data-eb-role="p" data-eb-kind="text">Masa gruesa artesanal, extra queso y tus ingredientes favoritos. Ideal para compartir en casa.</p>
+          <div class="price">Ver precio en tienda</div>
+          <a class="dish-link" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.34" data-eb-role="a" data-eb-kind="link">Ver en catálogo →</a>
+        </div>
+      </article>
+      <article class="dish">
+        <div class="dish-top" aria-hidden="true">🌮</div>
+        <div class="dish-body">
+          <span class="tag">Callejeros</span><span class="tag">Al carbón</span>
+          <h3 data-eb-editable="text" data-eb-key="index.h3.35" data-eb-role="h3" data-eb-kind="text">Tacos del Patrón</h3>
+          <p data-eb-editable="text" data-eb-key="index.p.36" data-eb-role="p" data-eb-kind="text">Orden de tacos de pastor, asada o pollo con cebolla, cilantro, salsa roja y limón. Tortilla calientita siempre.</p>
+          <div class="price">Ver precio en tienda</div>
+          <a class="dish-link" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.37" data-eb-role="a" data-eb-kind="link">Ver en catálogo →</a>
+        </div>
+      </article>
+      <article class="dish">
+        <div class="dish-top" aria-hidden="true">🍗</div>
+        <div class="dish-body">
+          <span class="tag">Picositas</span><span class="tag">Para compartir</span>
+          <h3 data-eb-editable="text" data-eb-key="index.h3.38" data-eb-role="h3" data-eb-kind="text">Alitas Bravas + Papas</h3>
+          <p data-eb-editable="text" data-eb-key="index.p.39" data-eb-role="p" data-eb-kind="text">Alitas bañadas en salsa búfalo o mango-habanero con papas gajo y ranch para enfriar el picor.</p>
+          <div class="price">Ver precio en tienda</div>
+          <a class="dish-link" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.40" data-eb-role="a" data-eb-kind="link">Ver en catálogo →</a>
+        </div>
+      </article>
+      <article class="dish">
+        <div class="dish-top" aria-hidden="true">🥪</div>
+        <div class="dish-body">
+          <span class="tag">Gigante</span><span class="tag">Rellena</span>
+          <h3 data-eb-editable="text" data-eb-key="index.h3.41" data-eb-role="h3" data-eb-kind="text">Torta Cubana Capo</h3>
+          <p data-eb-editable="text" data-eb-key="index.p.42" data-eb-role="p" data-eb-kind="text">Milanesa, jamón, salchicha, huevo, queso y aguacate en pan tostado con frijoles. Pura potencia campechana.</p>
+          <div class="price">Ver precio en tienda</div>
+          <a class="dish-link" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.43" data-eb-role="a" data-eb-kind="link">Ver en catálogo →</a>
+        </div>
+      </article>
+      <article class="dish">
+        <div class="dish-top" aria-hidden="true">🍟🥤</div>
+        <div class="dish-body">
+          <span class="tag">Combo</span><span class="tag">Ahorra</span>
+          <h3 data-eb-editable="text" data-eb-key="index.h3.44" data-eb-role="h3" data-eb-kind="text">Combo Capo + Refresco</h3>
+          <p data-eb-editable="text" data-eb-key="index.p.45" data-eb-role="p" data-eb-kind="text">Arma tu combo con hamburguesa o torta + papas + refresco bien frío. Perfecto para el antojo completo.</p>
+          <div class="price">Ver precio en tienda</div>
+          <a class="dish-link" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.46" data-eb-role="a" data-eb-kind="link">Ver en catálogo →</a>
+        </div>
+      </article>
     </div>
-    <div class="center">
-      <a class="btn btn-primary" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.43" data-eb-role="a" data-eb-kind="link">Ver menú completo y pedir</a>
-      <p style="color:var(--dim);font-size:13px" data-eb-editable="text" data-eb-key="index.p.44" data-eb-role="p" data-eb-kind="text">Precios y fotos actualizados dentro de la tienda.</p>
+    <div style="text-align:center;margin-top:1.4rem">
+      <a class="btn btn-primary" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.47" data-eb-role="a" data-eb-kind="link">Abrir catálogo completo en la tienda →</a>
     </div>
   </section>
 
-  <!-- COMO PEDIR -->
-  <section class="wrap block" id="como-pedir" style="padding-top:0">
-    <div class="kicker">Cómo pedir</div>
-    <h2 data-eb-editable="text" data-eb-key="index.h2.45" data-eb-role="h2" data-eb-kind="text">Pide en 4 pasos, sin llamadas eternas</h2>
-    <div class="steps">
-      <div class="step"><b class="num">1</b><h3 data-eb-editable="text" data-eb-key="index.h3.46" data-eb-role="h3" data-eb-kind="text">Entra a la tienda</h3><p data-eb-editable="text" data-eb-key="index.p.47" data-eb-role="p" data-eb-kind="text">Toca <a href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.48" data-eb-role="a" data-eb-kind="link">Ver tienda</a> y explora el catálogo con fotos y precios.</p></div>
-      <div class="step"><b class="num">2</b><h3 data-eb-editable="text" data-eb-key="index.h3.49" data-eb-role="h3" data-eb-kind="text">Elige tu producto</h3><p data-eb-editable="text" data-eb-key="index.p.50" data-eb-role="p" data-eb-kind="text">Abre el detalle, elige cantidad y agrégalo al carrito.</p></div>
-      <div class="step"><b class="num">3</b><h3 data-eb-editable="text" data-eb-key="index.h3.51" data-eb-role="h3" data-eb-kind="text">Confirma en carrito</h3><p data-eb-editable="text" data-eb-key="index.p.52" data-eb-role="p" data-eb-kind="text">Revisa tu carrito y haz checkout con tus datos de entrega.</p></div>
-       <div class="step"><b class="num">4</b><h3 data-eb-editable="text" data-eb-key="index.h3.53" data-eb-role="h3" data-eb-kind="text">Recibe en casa</h3><p data-eb-editable="text" data-eb-key="index.p.54" data-eb-role="p" data-eb-kind="text">Sigue tu pedido en <a href="tienda/pedidos.html" data-eb-editable="link" data-eb-key="index.a.55" data-eb-role="a" data-eb-kind="link">Mis pedidos</a> o pregunta por WhatsApp al 981 133 2914.</p></div>
-    </div>
-    <div class="center">
-      <a class="btn btn-ghost" href="tienda/carrito.html" data-eb-editable="link" data-eb-key="index.a.56" data-eb-role="a" data-eb-kind="link">Ir a mi carrito</a>
-      <a class="btn btn-ghost" href="tienda/pedidos.html" data-eb-editable="link" data-eb-key="index.a.57" data-eb-role="a" data-eb-kind="link">Mis pedidos</a>
-    </div>
-  </section>
-
-  <!-- INFO -->
-  <section class="wrap block" id="contacto" style="padding-top:0">
-    <div class="kicker">Horario, ubicación y contacto</div>
-    <h2 data-eb-editable="text" data-eb-key="index.h2.58" data-eb-role="h2" data-eb-kind="text">Estamos en Campeche, listos para llevarte</h2>
-    <p class="sub" data-eb-editable="text" data-eb-key="index.p.59" data-eb-role="p" data-eb-kind="text">Nos dedicamos a vender comida rápida a domicilio o para comer en casa. Llámanos, escríbenos o cae a la tienda en línea.</p>
-    <div class="info-grid">
-      <div class="panel">
-        <span class="open-pill" id="open-pill">● Verificando horario…</span>
-        <table class="hours" aria-label="Horario EL CAPO">
+  <!-- NEGOCIO -->
+  <section class="block" id="negocio">
+    <h2 class="sec-title" data-eb-editable="text" data-eb-key="index.h2.48" data-eb-role="h2" data-eb-kind="text">🏠 EL CAPO · Comida rápida en Campeche</h2>
+    <p class="sec-sub" data-eb-editable="text" data-eb-key="index.p.49" data-eb-role="p" data-eb-kind="text">Vendemos comida rápida a domicilio. Clientes locales y antojadizos de comida rápida: aquí siempre hay algo caliente esperándolos.</p>
+    <div class="negocio">
+      <div class="info-box">
+        <dl>
+          <dt>NEGOCIO</dt>
+          <dd><strong>EL CAPO</strong> — Vendemos comida rápida a domicilio o para comer en casa.</dd>
+          <dt>DESCRIPCIÓN</dt>
+          <dd>Nos dedicamos a vender comida rápida a domicilio o para comer en casa. Menú pensado para que entres a la página, elijas algún producto y compres fácil.</dd>
+          <dt>CIUDAD</dt>
+          <dd>📍 Campeche, México</dd>
+          <dt>TELÉFONO / PEDIDOS</dt>
+          <dd>📞 <a href="tel:+529811332914" style="color:var(--maiz);font-weight:800" data-eb-editable="link" data-eb-key="index.a.50" data-eb-role="a" data-eb-kind="link">981 133 2914</a> — Llama para pedir, preguntar cobertura y tiempos.</dd>
+          <dt>REDES</dt>
+          <dd>Facebook: EL CAPO · Instagram: EL CAPO</dd>
+        </dl>
+        <table class="horario" aria-label="Horario de EL CAPO">
+          <tr><th>Día</th><th>Horario</th></tr>
           <tr><td>Lunes a Viernes</td><td>7:00 – 21:00</td></tr>
           <tr><td>Sábado</td><td>8:00 – 22:00</td></tr>
           <tr><td>Domingo</td><td>9:00 – 15:00</td></tr>
         </table>
-        <div class="contact-row">
-          <a class="btn btn-primary btn-sm" href="tel:+529811332914" data-eb-editable="link" data-eb-key="index.a.60" data-eb-role="a" data-eb-kind="link">📞 981 133 2914</a>
-          <a class="btn btn-ghost btn-sm" href="https://wa.me/529811332914?text=Hola%20EL%20CAPO%2C%20tengo%20una%20duda%20sobre%20el%20men%C3%BA" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.61" data-eb-role="a" data-eb-kind="link">Dudas por WhatsApp</a>
-          <a class="btn btn-ghost btn-sm" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.62" data-eb-role="a" data-eb-kind="link">Tienda en línea</a>
-        </div>
-        <p style="color:var(--muted);font-size:13.5px;margin-top:14px" data-eb-editable="text" data-eb-key="index.p.63" data-eb-role="p" data-eb-kind="text">📍 Campeche, México.<br>Facebook / Instagram: <strong style="color:#fff">EL CAPO</strong><br>¿Duda rápida? Marca o manda WhatsApp y te ayudamos; tu pedido se confirma en la tienda en línea.</p>
       </div>
-      <div class="panel" style="padding:12px">
-        <div class="map">
-          <iframe title="Mapa EL CAPO Campeche" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1590204.7511493105!2d-90.0833210465046!3d19.18394339423709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5a55d2e2bd4cb3%3A0x18dfb8a962aab997!2sPizzas%20y%20Tacos%20EL%20SUSPIRO!5e1!3m2!1ses-419!2smx!4v1788581362156!5m2!1ses-419!2smx"></iframe>
+      <div>
+        <div class="map-wrap">
+          <iframe title="Mapa EL CAPO Campeche" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1590204.7511493105!2d-90.0833210465046!3d19.18394339423709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5a55d2e2bd4cb3%3A0x18dfb8a962aab997!2sPizzas%20y%20Tacos%20EL%20SUSPIRO!5e1!3m2!1ses-419!2smx!4v1788581362156!5m2!1ses-419!2smx" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-        <div style="padding:10px 10px 6px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center">
-          <span style="font-size:13px;color:var(--muted)">Cobertura a domicilio según ubicación • &lt;30 min</span>
-          <a class="link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Pizzas+y+Tacos+EL+SUSPIRO+Campeche" data-eb-editable="link" data-eb-key="index.a.64" data-eb-role="a" data-eb-kind="link">Abrir en Google Maps</a>
+        <p style="margin-top:.6rem;font-family:Verdana,sans-serif;font-size:.8rem;color:var(--crema2)" data-eb-editable="text" data-eb-key="index.p.51" data-eb-role="p" data-eb-kind="text">Mapa de referencia en Campeche. Confirma tu ubicación por teléfono al pedir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESO TIENDA -->
+  <section class="block" id="tienda-acceso">
+    <div class="tienda-acceso">
+      <div>
+        <h2 data-eb-editable="text" data-eb-key="index.h2.52" data-eb-role="h2" data-eb-kind="text">🛒 Pide en la tienda EL CAPO</h2>
+        <p style="color:var(--crema2)" data-eb-editable="text" data-eb-key="index.p.53" data-eb-role="p" data-eb-kind="text">Todo el catálogo, tu carrito y tus pedidos están en la tienda. Desde aquí entras directo:</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.54" data-eb-role="a" data-eb-kind="link">Ver catálogo</a>
+          <a class="btn btn-secondary" href="tel:+529811332914" data-eb-editable="link" data-eb-key="index.a.55" data-eb-role="a" data-eb-kind="link">Pedir por teléfono</a>
         </div>
+      </div>
+      <div class="store-links">
+        <a href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.56" data-eb-role="a" data-eb-kind="link"><span>📖 Catálogo completo</span><span>→</span></a>
+        <a class="alt" href="tienda/carrito.html" data-eb-editable="link" data-eb-key="index.a.57" data-eb-role="a" data-eb-kind="link"><span>🛒 Mi carrito</span><span>→</span></a>
+        <a href="tienda/pedidos.html" data-eb-editable="link" data-eb-key="index.a.58" data-eb-role="a" data-eb-kind="link"><span>🧾 Mis pedidos</span><span>→</span></a>
       </div>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap foot">
+  <div class="foot">
     <div>
-      <a class="brand" href="index.html" style="margin-bottom:10px" data-eb-editable="link" data-eb-key="index.a.65" data-eb-role="a" data-eb-kind="link"><span class="logo">C</span><span><b>EL CAPO</b><small>COMIDA RÁPIDA • CAMPECHE</small></span></a>
-      <p data-eb-editable="text" data-eb-key="index.p.66" data-eb-role="p" data-eb-kind="text">Comida rápida a domicilio en Campeche. Pedidos a domicilio en menos de 30 minutos dependiendo de tu ubicación. Lun a Vie 7:00-21:00, Sáb 8:00-22:00, Dom 9:00-15:00.</p>
+      <h4 data-eb-editable="text" data-eb-key="index.h4.59" data-eb-role="h4" data-eb-kind="text">EL CAPO</h4>
+      <p data-eb-editable="text" data-eb-key="index.p.60" data-eb-role="p" data-eb-kind="text">Comida rápida a domicilio en Campeche.<br>Lun–Vie 7:00–21:00 · Sáb 8:00–22:00 · Dom 9:00–15:00</p>
     </div>
-    <nav aria-label="Enlaces">
-      <a href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.67" data-eb-role="a" data-eb-kind="link">Tienda</a>
-      <a href="tienda/carrito.html" data-eb-editable="link" data-eb-key="index.a.68" data-eb-role="a" data-eb-kind="link">Carrito</a>
-      <a href="tienda/pedidos.html" data-eb-editable="link" data-eb-key="index.a.69" data-eb-role="a" data-eb-kind="link">Mis pedidos</a>
-      <a href="tel:+529811332914" data-eb-editable="link" data-eb-key="index.a.70" data-eb-role="a" data-eb-kind="link">981 133 2914</a>
-    </nav>
+    <div>
+      <h4 data-eb-editable="text" data-eb-key="index.h4.61" data-eb-role="h4" data-eb-kind="text">Contacto</h4>
+      <p data-eb-editable="text" data-eb-key="index.p.62" data-eb-role="p" data-eb-kind="text">📞 <a href="tel:+529811332914" data-eb-editable="link" data-eb-key="index.a.63" data-eb-role="a" data-eb-kind="link">981 133 2914</a><br>📍 Campeche, México<br>Facebook / Instagram: EL CAPO</p>
+    </div>
+    <div>
+      <h4 data-eb-editable="text" data-eb-key="index.h4.64" data-eb-role="h4" data-eb-kind="text">Tienda</h4>
+      <p data-eb-editable="text" data-eb-key="index.p.65" data-eb-role="p" data-eb-kind="text"><a href="tienda/index.html" data-eb-editable="link" data-eb-key="index.a.66" data-eb-role="a" data-eb-kind="link">Catálogo</a> · <a href="tienda/carrito.html" data-eb-editable="link" data-eb-key="index.a.67" data-eb-role="a" data-eb-kind="link">Carrito</a> · <a href="tienda/pedidos.html" data-eb-editable="link" data-eb-key="index.a.68" data-eb-role="a" data-eb-kind="link">Mis pedidos</a><br><a href="#hero" data-eb-editable="link" data-eb-key="index.a.69" data-eb-role="a" data-eb-kind="link">Volver arriba ↑</a></p>
+    </div>
   </div>
-  <div class="wrap"><p style="color:#6b5a48;font-size:12px" data-eb-editable="text" data-eb-key="index.p.71" data-eb-role="p" data-eb-kind="text">© 2026 EL CAPO • Página principal informativa. Los pedidos, precios y pagos se gestionan en la tienda.</p></div>
+  <p style="max-width:1150px;margin:1rem auto 0;color:#8a7a63;font-size:.75rem" data-eb-editable="text" data-eb-key="index.p.70" data-eb-role="p" data-eb-kind="text">© EL CAPO Campeche. Página de presentación: el menú mostrado es ilustrativo, los precios y la compra están en la tienda.</p>
 </footer>
-
-<a class="whats" href="https://wa.me/529811332914?text=Hola%20EL%20CAPO%2C%20tengo%20una%20duda%20sobre%20el%20men%C3%BA" target="_blank" rel="noopener" aria-label="Dudas por WhatsApp" data-eb-editable="link" data-eb-key="index.a.72" data-eb-role="a" data-eb-kind="link">💬 Dudas por WhatsApp</a>
 
 <script src="script.js" defer></script>
 <script>
-// Solo presentación: horario abierto/cerrado + hora de hoy. Sin carrito, sin pedidos, sin auth.
 (function(){
-  var pill = document.getElementById('open-pill');
-  var today = document.getElementById('today-hours');
-  try{
-    var d = new Date();
-    var day = d.getDay(); // 0 dom .. 6 sab
-    var mins = d.getHours()*60 + d.getMinutes();
-    var ranges = {0:[9*60,15*60], 6:[8*60,22*60]};
-    var r = (day in ranges) ? ranges[day] : [7*60,21*60];
-    var open = mins >= r[0] && mins < r[1];
-    function fmt(m){var h=Math.floor(m/60),mm=m%60;var ap=h>=12?'p.m.':'a.m.';var hh=h%12||12;return hh+':'+String(mm).padStart(2,'0')+' '+ap;}
-    if(today) today.textContent = fmt(r[0])+' – '+fmt(r[1]);
-    if(pill){
-      pill.textContent = open ? '● Abierto ahora • cierra '+fmt(r[1]) : '● Cerrado ahora • abre '+fmt(r[0]);
-      pill.style.borderColor = open ? '#1f7a5a' : '#7a3a1f';
-      pill.style.color = open ? '#7bf0c4' : '#ffcc99';
-    }
-  }catch(e){ if(pill) pill.textContent = '● Lun–Vie 7–21 • Sáb 8–22 • Dom 9–15'; }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href').slice(1);
+      var el=document.getElementById(id);
+      if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'});}
+    });
+  });
 })();
 </script>
 </body>
