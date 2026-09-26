@@ -1,34 +1,30 @@
-/* EL CAPO - script de presentacion. No toca atributos data-itm (los hidrata el runtime ITM). Solo navegacion y animaciones. */
+// EL CAPO — UI general. Sin carrito propio.
+// El runtime ITM gestiona carrito, inventario y pedidos autenticados.
 (function(){
-  var toggle = document.querySelector('[data-nav-toggle]');
-  var nav = document.querySelector('[data-nav]');
-  if(toggle && nav){
-    toggle.addEventListener('click', function(){ nav.classList.toggle('open'); });
-    nav.addEventListener('click', function(e){ if(e.target.tagName === 'A') nav.classList.remove('open'); });
+  function toggleMenu(){
+    var nav = document.querySelector('nav.main');
+    if(nav) nav.classList.toggle('open');
   }
-  var yearEls = document.querySelectorAll('[data-year]');
-  var y = new Date().getFullYear();
-  yearEls.forEach(function(el){ el.textContent = y; });
-
-  // Revelado suave solo para secciones de presentación
-  var io = null;
-  try{
-    io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('visible'); io.unobserve(en.target); } });
-    },{threshold:.12});
-    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-  }catch(e){
-    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('visible'); });
-  }
-
-  // Ancla suave para CTAs de presentación (no interfiere con tienda)
-  document.querySelectorAll('a[href^="#"]:not([data-itm-product-open])').forEach(function(a){
-    a.addEventListener('click', function(ev){
-      var id = a.getAttribute('href');
-      if(id.length > 1){
-        var t = document.querySelector(id);
-        if(t){ ev.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }
-      }
-    });
+  document.addEventListener('click', function(e){
+    var t = e.target.closest && e.target.closest('.menu-toggle');
+    if(t) toggleMenu();
+    var f = e.target.closest && e.target.closest('[data-filter-btn]');
+    if(f){
+      var v = f.getAttribute('data-filter-btn');
+      document.querySelectorAll('[data-filter-btn]').forEach(function(b){ b.classList.remove('active'); });
+      f.classList.add('active');
+      document.querySelectorAll('[data-cat]').forEach(function(card){
+        if(v==='todo' || card.getAttribute('data-cat')===v) card.style.display='';
+        else card.style.display='none';
+      });
+    }
   });
+  // Año footer
+  document.querySelectorAll('[data-year]').forEach(function(el){ el.textContent = new Date().getFullYear(); });
+  // Detalle fallback: muestra id de ?id=
+  try{
+    var params = new URLSearchParams(location.search);
+    var id = params.get('id');
+    document.querySelectorAll('[data-detail-id-text]').forEach(function(el){ if(id) el.textContent = id; });
+  }catch(_){}
 })();
