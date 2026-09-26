@@ -1,34 +1,205 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es-MX">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mis pedidos - Tienda EL CAPO</title>
-<meta name="description" content="Mis pedidos EL CAPO: historial autenticado con folio, fecha, estado y total.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis pedidos | EL CAPO</title>
+<meta name="description" content="Mis pedidos EL CAPO en Campeche: consulta el estado de tu pedido a domicilio con tu código de confirmación. Entrega en menos de 30 minutos según ubicación.">
 <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-<header class="site"><div class="bar">
-<a class="logo" href="../index.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.1" data-eb-role="a" data-eb-kind="link"><span class="logo-badge">C</span><span>EL CAPO<small>MIS PEDIDOS</small></span></a>
-<button class="menu-toggle" aria-label="Abrir menú" type="button" data-eb-editable="link" data-eb-key="tienda-pedidos.button.2" data-eb-role="button" data-eb-kind="link">☰</button>
-<nav class="main"><a href="../index.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.3" data-eb-role="a" data-eb-kind="link">Inicio</a><a href="index.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.4" data-eb-role="a" data-eb-kind="link">Catálogo</a><a href="carrito.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.5" data-eb-role="a" data-eb-kind="link">Carrito</a><a href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.6" data-eb-role="a" data-eb-kind="link">Mis pedidos</a><a class="btn" href="index.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.7" data-eb-role="a" data-eb-kind="link">Nuevo pedido</a></nav>
-<div data-itm-order-list></div><template data-itm-order-card><article><strong data-itm-order-id></strong><span data-itm-order-payment></span><span data-itm-order-status></span><time data-itm-order-created></time><strong data-itm-order-total></strong><div data-itm-order-items></div></article></template>\n</div></header>
-<main class="wrap">
-<h1 style="margin-top:22px" data-eb-editable="text" data-eb-key="tienda-pedidos.h1.8" data-eb-role="h1" data-eb-kind="text">Mis pedidos</h1>
-<p class="sub" data-eb-editable="text" data-eb-key="tienda-pedidos.p.9" data-eb-role="p" data-eb-kind="text">Historial autenticado del visitante (Neon, código 01). Solo lectura, sin dashboard administrativo.</p>
-<div data-itm-store data-itm-store-view="orders" data-project-id="25673c87-8f7b-4bb9-a7c5-8eee9e79aeba" data-store-code="01">
-  <div class="store-shell">
-    <div data-itm-orders>
-      <div class="cart-line"><span><strong>Folio ejemplo CAPO-001</strong> · 25/09/2026 · En preparación</span><strong>$339</strong></div>
-      <div class="cart-line"><span><strong>Folio ejemplo CAPO-000</strong> · 20/09/2026 · Entregado</span><strong>$214</strong></div>
-      <p class="small" data-eb-editable="text" data-eb-key="tienda-pedidos.p.10" data-eb-role="p" data-eb-kind="text">Inicia sesión cuando el runtime lo pida para ver tus folios reales con fecha, estado, total y detalle. Contenido de ejemplo para que la pantalla nunca esté vacía.</p>
-      <p data-eb-editable="text" data-eb-key="tienda-pedidos.p.11" data-eb-role="p" data-eb-kind="text"><a class="btn" href="index.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.12" data-eb-role="a" data-eb-kind="link">Volver al catálogo</a> <a class="btn ghost" href="carrito.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.13" data-eb-role="a" data-eb-kind="link">Ir al carrito</a></p>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="../index.html" aria-label="EL CAPO inicio" data-eb-editable="link" data-eb-key="tienda-pedidos.a.1" data-eb-role="a" data-eb-kind="link">
+      <span class="logo" aria-hidden="true">C</span>
+      <span><b>EL CAPO</b><small>COMIDA RÁPIDA • CAMPECHE</small></span>
+    </a>
+    <nav class="nav" aria-label="Navegación tienda">
+      <a class="hide-m" href="../index.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.2" data-eb-role="a" data-eb-kind="link">Inicio</a>
+      <a class="hide-m" href="index.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.3" data-eb-role="a" data-eb-kind="link">Tienda</a>
+      <a class="hide-m" href="carrito.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.4" data-eb-role="a" data-eb-kind="link">Carrito</a>
+      <a href="pedidos.html" aria-current="page" data-eb-editable="link" data-eb-key="tienda-pedidos.a.5" data-eb-role="a" data-eb-kind="link">Mis pedidos</a>
+      <a class="btn btn-primary btn-sm" href="index.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.6" data-eb-role="a" data-eb-kind="link">Pedir de nuevo</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" data-itm-store data-itm-store-view="orders">
+  <nav class="breadcrumb" aria-label="Migas de pan">
+    <a href="../index.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.7" data-eb-role="a" data-eb-kind="link">Inicio</a><span aria-hidden="true">/</span>
+    <a href="index.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.8" data-eb-role="a" data-eb-kind="link">Tienda</a><span aria-hidden="true">/</span>
+    <span>Mis pedidos</span>
+  </nav>
+
+  <div class="store-hero">
+    <div class="kicker">Tienda EL CAPO • Campeche</div>
+    <h1 data-eb-editable="text" data-eb-key="tienda-pedidos.h1.9" data-eb-role="h1" data-eb-kind="text">Mis pedidos, <span class="fire">en un solo lugar</span></h1>
+    <p class="sub" data-eb-editable="text" data-eb-key="tienda-pedidos.p.10" data-eb-role="p" data-eb-kind="text">Aquí aparecen los pedidos que confirmaste en el carrito. El sistema de tienda muestra el estado, el detalle y el total. Guarda tu código de confirmación para preguntar por WhatsApp.</p>
+    <div class="hero-meta" style="margin-top:12px">
+      <span class="chip">⚡ <strong>Entrega &lt; 30 min</strong> según ubicación</span>
+      <span class="chip">🕒 <strong>Lun–Vie 7–21 • Sáb 8–22 • Dom 9–15</strong></span>
+      <span class="chip">📞 <strong>981 133 2914</strong></span>
     </div>
   </div>
-</div>
+
+  <section class="block" style="padding-top:22px" aria-label="Listado de pedidos" data-itm-orders>
+    <div class="catalog-toolbar">
+      <label class="search">
+        <span aria-hidden="true">🧾</span>
+        <input type="search" id="orders-search" placeholder="Busca por código, ej. CAPO-4821…" aria-label="Buscar pedido por código">
+      </label>
+      <div class="catalog-filters" role="group" aria-label="Filtros de estado">
+        <button class="pill active" type="button" aria-pressed="true" data-eb-editable="link" data-eb-key="tienda-pedidos.button.11" data-eb-role="button" data-eb-kind="link">Todos</button>
+        <button class="pill" type="button" aria-pressed="false" data-eb-editable="link" data-eb-key="tienda-pedidos.button.12" data-eb-role="button" data-eb-kind="link">En preparación</button>
+        <button class="pill" type="button" aria-pressed="false" data-eb-editable="link" data-eb-key="tienda-pedidos.button.13" data-eb-role="button" data-eb-kind="link">En camino</button>
+        <button class="pill" type="button" aria-pressed="false" data-eb-editable="link" data-eb-key="tienda-pedidos.button.14" data-eb-role="button" data-eb-kind="link">Entregados</button>
+      </div>
+    </div>
+
+    <p class="small muted" style="margin:0 0 6px" data-eb-editable="text" data-eb-key="tienda-pedidos.p.15" data-eb-role="p" data-eb-kind="text">Muestra tu código al repartidor o en mostrador. Si no ves tu pedido, confirma primero en <a class="link" href="carrito.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.16" data-eb-role="a" data-eb-kind="link">Carrito</a>.</p>
+
+    <div class="orders-list" data-itm-order-list id="orders-list">
+      <article class="order-card" data-itm-order-card>
+        <div class="order-head">
+          <span class="order-id">Pedido CAPO-4821 • Hoy 13:20</span>
+          <span class="order-status status-preparacion">En preparación</span>
+        </div>
+        <ul class="order-items" aria-label="Detalle del pedido CAPO-4821">
+          <li><span>1× Pizza Capo especial (mediana)</span><span>$189</span></li>
+          <li><span>2× Orden de tacos campechanos (5 pzas)</span><span>$190</span></li>
+          <li><span>Envío a domicilio • Campeche</span><span>$30</span></li>
+        </ul>
+        <div class="order-foot">
+          <span class="order-total">Total $409 • Efectivo al recibir</span>
+          <span class="contact-row" style="margin-top:0">
+            <a class="btn btn-ghost btn-sm" href="carrito.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.17" data-eb-role="a" data-eb-kind="link">Ver carrito</a>
+            <a class="btn btn-whats btn-sm" href="https://wa.me/529811332914?text=Hola%20EL%20CAPO%2C%20pregunto%20por%20mi%20pedido%20CAPO-4821" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="tienda-pedidos.a.18" data-eb-role="a" data-eb-kind="link">Preguntar por WhatsApp</a>
+          </span>
+        </div>
+      </article>
+
+      <article class="order-card" data-itm-order-card>
+        <div class="order-head">
+          <span class="order-id">Pedido CAPO-3770 • Ayer 20:05</span>
+          <span class="order-status status-entregado">Entregado</span>
+        </div>
+        <ul class="order-items" aria-label="Detalle del pedido CAPO-3770">
+          <li><span>1× Hamburguesa doble Capo</span><span>$129</span></li>
+          <li><span>1× Papas sazonadas + aderezo</span><span>$59</span></li>
+          <li><span>Para recoger en local</span><span>$0</span></li>
+        </ul>
+        <div class="order-foot">
+          <span class="order-total">Total $188 • Pagado en local</span>
+          <span class="contact-row" style="margin-top:0">
+            <a class="btn btn-ghost btn-sm" href="index.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.19" data-eb-role="a" data-eb-kind="link">Pedir de nuevo</a>
+            <a class="btn btn-ghost btn-sm" href="carrito.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.20" data-eb-role="a" data-eb-kind="link">Ir al carrito</a>
+          </span>
+        </div>
+      </article>
+
+      <article class="order-card" data-itm-order-card>
+        <div class="order-head">
+          <span class="order-id">Pedido CAPO-3502 • Dom 14:40</span>
+          <span class="order-status status-encamino">En camino</span>
+        </div>
+        <ul class="order-items" aria-label="Detalle del pedido CAPO-3502">
+          <li><span>1× Alitas picosas (8 pzas)</span><span>$119</span></li>
+          <li><span>1× Pizza hawaiana (mediana)</span><span>$169</span></li>
+          <li><span>Envío a domicilio • Campeche</span><span>$30</span></li>
+        </ul>
+        <div class="order-foot">
+          <span class="order-total">Total $318 • Transferencia</span>
+          <span class="contact-row" style="margin-top:0">
+            <a class="btn btn-whats btn-sm" href="https://wa.me/529811332914?text=Hola%20EL%20CAPO%2C%20pregunto%20por%20mi%20pedido%20CAPO-3502" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="tienda-pedidos.a.21" data-eb-role="a" data-eb-kind="link">Preguntar por WhatsApp</a>
+            <a class="btn btn-ghost btn-sm" href="index.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.22" data-eb-role="a" data-eb-kind="link">Ver catálogo</a>
+          </span>
+        </div>
+      </article>
+    </div>
+
+    <div class="empty" id="orders-empty" hidden>
+      <span class="big" aria-hidden="true">🧾</span>
+      <h3 style="color:#fff;margin:0 0 6px" data-eb-editable="text" data-eb-key="tienda-pedidos.h3.23" data-eb-role="h3" data-eb-kind="text">No encontramos ese pedido aquí</h3>
+      <p style="margin:0 0 14px" data-eb-editable="text" data-eb-key="tienda-pedidos.p.24" data-eb-role="p" data-eb-kind="text">Revisa tu código de confirmación o confirma tu carrito primero.</p>
+      <a class="btn btn-primary btn-sm" href="carrito.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.25" data-eb-role="a" data-eb-kind="link">Ir a mi carrito</a>
+    </div>
+
+    <div class="detail-note" style="margin-top:16px">🧾 <strong>¿Dónde está mi código?</strong> Se genera en el <a class="link" href="carrito.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.26" data-eb-role="a" data-eb-kind="link">Carrito</a> al confirmar y aparece como CAPO-0000. Menciónalo por WhatsApp al <a class="link" href="https://wa.me/529811332914?text=Hola%20EL%20CAPO%2C%20pregunto%20por%20mi%20pedido" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="tienda-pedidos.a.27" data-eb-role="a" data-eb-kind="link">981 133 2914</a> para agilizar tu entrega.</div>
+
+    <div class="contact-row">
+      <a class="btn btn-ghost btn-sm" href="index.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.28" data-eb-role="a" data-eb-kind="link">← Volver al catálogo</a>
+      <a class="btn btn-ghost btn-sm" href="carrito.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.29" data-eb-role="a" data-eb-kind="link">Ir a mi carrito</a>
+      <a class="btn btn-ghost btn-sm" href="../index.html#como-pedir" data-eb-editable="link" data-eb-key="tienda-pedidos.a.30" data-eb-role="a" data-eb-kind="link">Cómo pedir</a>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0" aria-label="Ayuda de pedidos">
+    <div class="grid3">
+      <article class="card"><div class="icon">🛵</div><h3 data-eb-editable="text" data-eb-key="tienda-pedidos.h3.31" data-eb-role="h3" data-eb-kind="text">Estados del pedido</h3><p data-eb-editable="text" data-eb-key="tienda-pedidos.p.32" data-eb-role="p" data-eb-kind="text">Pendiente, en preparación, en camino y entregado. El repartidor confirma por WhatsApp al 981 133 2914.</p></article>
+      <article class="card"><div class="icon">💬</div><h3 data-eb-editable="text" data-eb-key="tienda-pedidos.h3.33" data-eb-role="h3" data-eb-kind="text">¿No ves tu pedido?</h3><p data-eb-editable="text" data-eb-key="tienda-pedidos.p.34" data-eb-role="p" data-eb-kind="text">Primero confirma en <a class="link" href="carrito.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.35" data-eb-role="a" data-eb-kind="link">Carrito</a>. Si pagaste y no aparece, escríbenos con tu código y tu nombre.</p></article>
+      <article class="card"><div class="icon">🔁</div><h3 data-eb-editable="text" data-eb-key="tienda-pedidos.h3.36" data-eb-role="h3" data-eb-kind="text">Vuelve a pedir</h3><p data-eb-editable="text" data-eb-key="tienda-pedidos.p.37" data-eb-role="p" data-eb-kind="text">Tus favoritos siguen en el <a class="link" href="index.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.38" data-eb-role="a" data-eb-kind="link">catálogo</a>: tacos, pizzas, hamburguesas, tortas y complementos.</p></article>
+    </div>
+  </section>
 </main>
-<footer><div class="wrap">© <span data-year>2026</span> EL CAPO · Pedidos autenticados.</div></footer>
-<script src="../script.js"></script>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="../index.html" style="margin-bottom:10px" data-eb-editable="link" data-eb-key="tienda-pedidos.a.39" data-eb-role="a" data-eb-kind="link"><span class="logo">C</span><span><b>EL CAPO</b><small>COMIDA RÁPIDA • CAMPECHE</small></span></a>
+      <p data-eb-editable="text" data-eb-key="tienda-pedidos.p.40" data-eb-role="p" data-eb-kind="text">Mis pedidos EL CAPO: tacos, pizzas, hamburguesas y más a domicilio en Campeche. Lun a Vie 7:00-21:00, Sáb 8:00-22:00, Dom 9:00-15:00.</p>
+    </div>
+    <nav aria-label="Enlaces tienda">
+      <a href="../index.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.41" data-eb-role="a" data-eb-kind="link">Inicio</a>
+      <a href="index.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.42" data-eb-role="a" data-eb-kind="link">Tienda</a>
+      <a href="carrito.html" data-eb-editable="link" data-eb-key="tienda-pedidos.a.43" data-eb-role="a" data-eb-kind="link">Carrito</a>
+      <a href="pedidos.html" aria-current="page" data-eb-editable="link" data-eb-key="tienda-pedidos.a.44" data-eb-role="a" data-eb-kind="link">Mis pedidos</a>
+      <a href="tel:+529811332914" data-eb-editable="link" data-eb-key="tienda-pedidos.a.45" data-eb-role="a" data-eb-kind="link">981 133 2914</a>
+    </nav>
+  </div>
+  <div class="wrap"><p style="color:#6b5a48;font-size:12px" data-eb-editable="text" data-eb-key="tienda-pedidos.p.46" data-eb-role="p" data-eb-kind="text">© 2026 EL CAPO • El estado de los pedidos lo gestiona el sistema de tienda en esta página.</p></div>
+</footer>
+
+<a class="whats" href="https://wa.me/529811332914?text=Hola%20EL%20CAPO%2C%20pregunto%20por%20mi%20pedido" target="_blank" rel="noopener" aria-label="Dudas por WhatsApp" data-eb-editable="link" data-eb-key="tienda-pedidos.a.47" data-eb-role="a" data-eb-kind="link">💬 Dudas por WhatsApp</a>
+
+<script>
+// Solo mejora visual: búsqueda por código y filtros por estado sobre las tarjetas de ejemplo.
+// No implementa tienda, carrito, pedidos ni autenticación; eso lo hace el runtime ITM vía data-itm-*.
+(function(){
+  var search = document.getElementById('orders-search');
+  var pills = Array.prototype.slice.call(document.querySelectorAll('.pill'));
+  var empty = document.getElementById('orders-empty');
+  function norm(s){ return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
+  function activeFilter(){
+    var t = 'todos';
+    pills.forEach(function(p){ if(p.classList.contains('active')) t = norm(p.textContent); });
+    return t;
+  }
+  function apply(){
+    var q = search ? norm(search.value.trim()) : '';
+    var f = activeFilter();
+    var visible = 0;
+    document.querySelectorAll('[data-itm-order-card]').forEach(function(card){
+      var text = norm(card.textContent);
+      var status = norm(card.querySelector('.order-status') ? card.querySelector('.order-status').textContent : '');
+      var okQ = !q || text.indexOf(q) !== -1;
+      var okF = f === 'todos' || status.indexOf(f) !== -1 || text.indexOf(f) !== -1;
+      var show = okQ && okF;
+      card.style.display = show ? '' : 'none';
+      if(show) visible++;
+    });
+    if(empty) empty.hidden = visible !== 0;
+  }
+  if(search) search.addEventListener('input', apply);
+  pills.forEach(function(p){
+    p.addEventListener('click', function(){
+      pills.forEach(function(x){ x.classList.remove('active'); x.setAttribute('aria-pressed','false'); });
+      p.classList.add('active'); p.setAttribute('aria-pressed','true');
+      apply();
+    });
+  });
+})();
+</script>
 
  src="../store.js" defer></script>
 </body>
