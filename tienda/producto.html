@@ -1,47 +1,203 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es-MX">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Detalle de producto - Tienda EL CAPO</title>
-<meta name="description" content="Detalle de producto EL CAPO: foto, precio, disponibilidad y añadir al carrito compartido.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detalle de producto | EL CAPO</title>
+<meta name="description" content="Detalle de producto EL CAPO en Campeche: ingredientes, cantidad y agregar al carrito. Entrega a domicilio en menos de 30 minutos según ubicación.">
 <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-<header class="site"><div class="bar">
-<a class="logo" href="../index.html" data-eb-editable="link" data-eb-key="tienda-producto.a.1" data-eb-role="a" data-eb-kind="link"><span class="logo-badge">C</span><span>EL CAPO<small>DETALLE</small></span></a>
-<button class="menu-toggle" aria-label="Abrir menú" type="button" data-eb-editable="link" data-eb-key="tienda-producto.button.2" data-eb-role="button" data-eb-kind="link">☰</button>
-<nav class="main"><a href="../index.html" data-eb-editable="link" data-eb-key="tienda-producto.a.3" data-eb-role="a" data-eb-kind="link">Inicio</a><a href="index.html" data-eb-editable="link" data-eb-key="tienda-producto.a.4" data-eb-role="a" data-eb-kind="link">Catálogo</a><a href="carrito.html" data-eb-editable="link" data-eb-key="tienda-producto.a.5" data-eb-role="a" data-eb-kind="link">Carrito</a><a href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-producto.a.6" data-eb-role="a" data-eb-kind="link">Mis pedidos</a><a class="btn" href="carrito.html" data-eb-editable="link" data-eb-key="tienda-producto.a.7" data-eb-role="a" data-eb-kind="link">Ver carrito</a></nav>
-<img data-itm-detail-image alt=""><span data-itm-detail-category></span><h1 data-itm-detail-name></h1><p data-itm-detail-description></p><strong data-itm-detail-price></strong><label>Cantidad <input type="number" min="1" value="1" data-itm-detail-quantity></label><button type="button" data-itm-detail-add>Agregar al carrito</button><a data-itm-detail-cart-link href="carrito.html">Ir al carrito</a>\n</div></header>
-<main class="wrap">
-<p style="margin-top:18px" data-eb-editable="text" data-eb-key="tienda-producto.p.8" data-eb-role="p" data-eb-kind="text"><a href="index.html" data-eb-editable="link" data-eb-key="tienda-producto.a.9" data-eb-role="a" data-eb-kind="link">← Volver al catálogo</a></p>
-<h1 data-eb-editable="text" data-eb-key="tienda-producto.h1.10" data-eb-role="h1" data-eb-kind="text">Detalle del producto</h1>
-<p class="sub" data-eb-editable="text" data-eb-key="tienda-producto.p.11" data-eb-role="p" data-eb-kind="text">Ficha <code data-detail-id-text>(id)</code> desde <code>?id=...</code>. Precio, descripción y disponibilidad vienen del inventario Neon código 01. Usa el mismo carrito compartido por proyecto.</p>
-<div data-itm-store data-itm-store-view="product" data-project-id="25673c87-8f7b-4bb9-a7c5-8eee9e79aeba" data-store-code="01">
-  <div class="store-shell">
-    <div data-itm-product-detail>
-      <div class="grid c2">
-        <div><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Mulitas_al_pastor.JPG/1920px-Mulitas_al_pastor.JPG" alt="Producto EL CAPO" style="border-radius:14px;border:2px solid var(--line)" data-eb-editable="image" data-eb-key="tienda-producto.img.12" data-eb-role="img" data-eb-kind="image">
-        <p class="small" data-eb-editable="text" data-eb-key="tienda-producto.p.13" data-eb-role="p" data-eb-kind="text">Foto de referencia. El runtime muestra la foto real del producto <code data-detail-id-text>(id)</code>.</p></div>
-        <div>
-          <span class="tag">EL CAPO · Campeche</span>
-          <h2 data-eb-editable="text" data-eb-key="tienda-producto.h2.14" data-eb-role="h2" data-eb-kind="text">Producto <span data-detail-id-text>(id)</span></h2>
-          <p data-eb-editable="text" data-eb-key="tienda-producto.p.15" data-eb-role="p" data-eb-kind="text">Elige cantidad y añade al carrito compartido. Luego sigue al carrito para confirmar tu pedido a domicilio.</p>
-          <ul class="small">
-            <li>Disponibilidad: según inventario Neon</li>
-            <li>Entrega a domicilio en Campeche (menos de 30 min según ubicación)</li>
-            <li>El login se pide solo al confirmar el pedido</li>
-          </ul>
-          <p data-eb-editable="text" data-eb-key="tienda-producto.p.16" data-eb-role="p" data-eb-kind="text"><a class="btn" href="carrito.html" data-eb-editable="link" data-eb-key="tienda-producto.a.17" data-eb-role="a" data-eb-kind="link">Añadir y ir al carrito (lo gestiona el runtime)</a></p>
-          <p class="small" data-eb-editable="text" data-eb-key="tienda-producto.p.18" data-eb-role="p" data-eb-kind="text">Si el producto no carga, vuelve al <a href="index.html" data-eb-editable="link" data-eb-key="tienda-producto.a.19" data-eb-role="a" data-eb-kind="link">catálogo</a> y abre otra ficha con <code>?id=...</code>.</p>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="../index.html" aria-label="EL CAPO inicio" data-eb-editable="link" data-eb-key="tienda-producto.a.1" data-eb-role="a" data-eb-kind="link">
+      <span class="logo" aria-hidden="true">C</span>
+      <span><b>EL CAPO</b><small>COMIDA RÁPIDA • CAMPECHE</small></span>
+    </a>
+    <nav class="nav" aria-label="Navegación tienda">
+      <a class="hide-m" href="../index.html" data-eb-editable="link" data-eb-key="tienda-producto.a.2" data-eb-role="a" data-eb-kind="link">Inicio</a>
+      <a class="hide-m" href="index.html" data-eb-editable="link" data-eb-key="tienda-producto.a.3" data-eb-role="a" data-eb-kind="link">Tienda</a>
+      <a class="hide-m" href="carrito.html" data-eb-editable="link" data-eb-key="tienda-producto.a.4" data-eb-role="a" data-eb-kind="link">Carrito</a>
+      <a class="hide-m" href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-producto.a.5" data-eb-role="a" data-eb-kind="link">Mis pedidos</a>
+      <a class="btn btn-primary btn-sm" href="carrito.html" data-eb-editable="link" data-eb-key="tienda-producto.a.6" data-eb-role="a" data-eb-kind="link">Mi carrito</a>
+    </nav>
+  <img data-itm-detail-image alt=""><span data-itm-detail-category></span><p data-itm-detail-description></p><strong data-itm-detail-price></strong><a data-itm-detail-cart-link href="carrito.html">Ir al carrito</a>\n</div>
+</header>
+
+<main class="wrap" data-itm-store data-itm-store-view="product">
+  <nav class="breadcrumb" aria-label="Migas de pan">
+    <a href="../index.html" data-eb-editable="link" data-eb-key="tienda-producto.a.7" data-eb-role="a" data-eb-kind="link">Inicio</a><span aria-hidden="true">/</span>
+    <a href="index.html" data-eb-editable="link" data-eb-key="tienda-producto.a.8" data-eb-role="a" data-eb-kind="link">Tienda</a><span aria-hidden="true">/</span>
+    <span>Detalle de producto</span>
+  </nav>
+
+  <div class="store-hero" style="border-bottom:0;padding-bottom:0">
+    <div class="kicker">Tienda EL CAPO • Campeche</div>
+    <h1 style="font-size:clamp(28px,4vw,40px)" data-eb-editable="text" data-eb-key="tienda-producto.h1.9" data-eb-role="h1" data-eb-kind="text">Tu antojo, <span class="fire">al detalle</span></h1>
+    <p class="sub" data-eb-editable="text" data-eb-key="tienda-producto.p.10" data-eb-role="p" data-eb-kind="text">Revisa ingredientes, elige cantidad y agrégalo al carrito. El pago y la confirmación se hacen en el carrito.</p>
+  </div>
+
+  <!-- Detalle runtime ITM -->
+  <div class="detail-grid" data-itm-product-detail>
+    <div class="detail-gallery" aria-label="Foto del producto">
+      <span id="detail-emoji" aria-hidden="true">🍔</span>
+      <span class="flag" id="detail-flag" style="position:absolute;left:12px;top:12px;background:rgba(0,0,0,.65);border:1px solid #6b4420;color:#ffd166;font-size:11px;font-weight:800;padding:5px 10px;border-radius:999px;letter-spacing:.8px">🍔 EL CAPO</span>
+    </div>
+
+    <div class="detail-info">
+      <div class="kicker" id="detail-category">Hamburguesas • A domicilio</div>
+      <h1 data-itm-detail-name id="detail-name" data-eb-editable="text" data-eb-key="tienda-producto.h1.11" data-eb-role="h1" data-eb-kind="text">Hamburguesa doble Capo</h1>
+      <p class="stock ok" id="detail-stock" data-eb-editable="text" data-eb-key="tienda-producto.p.12" data-eb-role="p" data-eb-kind="text">● Disponible hoy</p>
+      <p class="detail-price" data-eb-editable="text" data-eb-key="tienda-producto.p.13" data-eb-role="p" data-eb-kind="text"><span id="detail-price">$129</span> <span class="small muted" id="detail-unit" style="font-size:13px;font-weight:600">MXN • Porción individual</span></p>
+      <p class="detail-desc" id="detail-desc" data-eb-editable="text" data-eb-key="tienda-producto.p.14" data-eb-role="p" data-eb-kind="text">Doble carne jugosa, tocino crujiente, queso cheddar fundido, pan brioche tostado y aderezo capo de la casa. La favorita para el hambre seria.</p>
+
+      <ul class="order-list" aria-label="Ingredientes principales" style="margin:12px 0 0">
+        <li><span>🥩 Ingredientes</span><span>AL MOMENTO</span></li>
+      </ul>
+      <p class="small muted" id="detail-ingredients" style="margin:8px 0 0" data-eb-editable="text" data-eb-key="tienda-producto.p.15" data-eb-role="p" data-eb-kind="text">Doble carne de res, tocino, cheddar, lechuga, tomate, cebolla caramelizada, pan brioche, aderezo capo. Salsa de la casa aparte.</p>
+
+      <div class="detail-row">
+        <div class="detail-qty">
+          <label for="detail-qty">Cantidad</label>
+          <div class="qty" role="group" aria-label="Selector de cantidad">
+            <button type="button" id="qty-minus" aria-label="Quitar uno" data-eb-editable="link" data-eb-key="tienda-producto.button.16" data-eb-role="button" data-eb-kind="link">−</button>
+            <output id="qty-view" for="detail-qty">1</output>
+            <input type="number" id="detail-qty" data-itm-detail-quantity value="1" min="1" max="20" step="1" aria-label="Cantidad a agregar" inputmode="numeric">
+            <button type="button" id="qty-plus" aria-label="Agregar uno" data-eb-editable="link" data-eb-key="tienda-producto.button.17" data-eb-role="button" data-eb-kind="link">+</button>
+          </div>
         </div>
+        <span class="small muted">Máx. 20 por pedido • Pregunta por paquete familiar.</span>
+      </div>
+
+      <div class="contact-row" style="margin-top:4px">
+        <button class="btn btn-primary btn-lg" type="button" data-itm-detail-add style="flex:1;min-width:220px" data-eb-editable="link" data-eb-key="tienda-producto.button.18" data-eb-role="button" data-eb-kind="link">Agregar al carrito • <span id="detail-add-total">$129</span></button>
+        <a class="btn btn-ghost" href="carrito.html" data-eb-editable="link" data-eb-key="tienda-producto.a.19" data-eb-role="a" data-eb-kind="link">Ir a mi carrito</a>
+      </div>
+
+      <div class="detail-note" style="margin-top:14px">📦 <strong>A domicilio o para recoger.</strong> Entrega en menos de 30 min según tu ubicación en Campeche. Lun–Vie 7–21 • Sáb 8–22 • Dom 9–15. Dudas: <a class="link" href="https://wa.me/529811332914?text=Hola%20EL%20CAPO%2C%20quiero%20preguntar%20por%20un%20producto" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="tienda-producto.a.20" data-eb-role="a" data-eb-kind="link">WhatsApp 981 133 2914</a>.</div>
+
+      <div class="contact-row">
+        <a class="btn btn-ghost btn-sm" href="index.html" data-eb-editable="link" data-eb-key="tienda-producto.a.21" data-eb-role="a" data-eb-kind="link">← Volver al catálogo</a>
+        <a class="btn btn-ghost btn-sm" href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-producto.a.22" data-eb-role="a" data-eb-kind="link">Mis pedidos</a>
+        <a class="btn btn-ghost btn-sm" href="../index.html#como-pedir" data-eb-editable="link" data-eb-key="tienda-producto.a.23" data-eb-role="a" data-eb-kind="link">Cómo pedir</a>
       </div>
     </div>
   </div>
-</div>
+
+  <section class="block" aria-label="Detalles del pedido">
+    <div class="grid3">
+      <article class="card"><div class="icon">🛵</div><h3 data-eb-editable="text" data-eb-key="tienda-producto.h3.24" data-eb-role="h3" data-eb-kind="text">Entrega rápida local</h3><p data-eb-editable="text" data-eb-key="tienda-producto.p.25" data-eb-role="p" data-eb-kind="text">Reparto en Campeche. Si estás cerca, llega calientito en menos de 30 minutos.</p></article>
+      <article class="card"><div class="icon">🔥</div><h3 data-eb-editable="text" data-eb-key="tienda-producto.h3.26" data-eb-role="h3" data-eb-kind="text">Hecho al momento</h3><p data-eb-editable="text" data-eb-key="tienda-producto.p.27" data-eb-role="p" data-eb-kind="text">Plancha y horno artesanal. Nada recalentado: se prepara cuando confirmas en carrito.</p></article>
+      <article class="card"><div class="icon">🧾</div><h3 data-eb-editable="text" data-eb-key="tienda-producto.h3.28" data-eb-role="h3" data-eb-kind="text">Confirma en carrito</h3><p data-eb-editable="text" data-eb-key="tienda-producto.p.29" data-eb-role="p" data-eb-kind="text">Este detalle solo agrega. Revisa cantidades, entrega y pago en <a class="link" href="carrito.html" data-eb-editable="link" data-eb-key="tienda-producto.a.30" data-eb-role="a" data-eb-kind="link">Carrito</a>.</p></article>
+    </div>
+  </section>
+
+  <section class="block" style="padding-top:0" aria-label="También te puede gustar">
+    <div class="kicker">Completa tu pedido</div>
+    <h2 data-eb-editable="text" data-eb-key="tienda-producto.h2.31" data-eb-role="h2" data-eb-kind="text">También te puede gustar</h2>
+    <p class="sub" data-eb-editable="text" data-eb-key="tienda-producto.p.32" data-eb-role="p" data-eb-kind="text">Atajos al mismo detalle con otro producto. Se abren con <code>?id=</code> y los resuelve el runtime de tienda.</p>
+    <div class="menu-grid" style="grid-template-columns:repeat(3,1fr)">
+      <article class="dish"><div class="dish-top d1"><small>🌮 TACOS</small><span>🌮</span></div><div class="dish-body"><h3 data-eb-editable="text" data-eb-key="tienda-producto.h3.33" data-eb-role="h3" data-eb-kind="text">Orden de tacos campechanos</h3><p data-eb-editable="text" data-eb-key="tienda-producto.p.34" data-eb-role="p" data-eb-kind="text">Bistec, pastor y chorizo. Orden 5 pzas.</p><div class="dish-foot"><span class="price">$95</span><a class="link" href="producto.html?id=tacos-campechanos" data-eb-editable="link" data-eb-key="tienda-producto.a.35" data-eb-role="a" data-eb-kind="link">Ver detalle</a></div></div></article>
+      <article class="dish"><div class="dish-top d2"><small>🍕 PIZZAS</small><span>🍕</span></div><div class="dish-body"><h3 data-eb-editable="text" data-eb-key="tienda-producto.h3.36" data-eb-role="h3" data-eb-kind="text">Pizza Capo especial</h3><p data-eb-editable="text" data-eb-key="tienda-producto.p.37" data-eb-role="p" data-eb-kind="text">Pepperoni, jamón, tocino y extra queso.</p><div class="dish-foot"><span class="price">$189</span><a class="link" href="producto.html?id=pizza-capo-especial" data-eb-editable="link" data-eb-key="tienda-producto.a.38" data-eb-role="a" data-eb-kind="link">Ver detalle</a></div></div></article>
+      <article class="dish"><div class="dish-top d5"><small>🍟 EXTRAS</small><span>🍟</span></div><div class="dish-body"><h3 data-eb-editable="text" data-eb-key="tienda-producto.h3.39" data-eb-role="h3" data-eb-kind="text">Papas sazonadas + aderezo</h3><p data-eb-editable="text" data-eb-key="tienda-producto.p.40" data-eb-role="p" data-eb-kind="text">Crujientes con sazonador capo.</p><div class="dish-foot"><span class="price">$59</span><a class="link" href="producto.html?id=papas-sazonadas" data-eb-editable="link" data-eb-key="tienda-producto.a.41" data-eb-role="a" data-eb-kind="link">Ver detalle</a></div></div></article>
+    </div>
+    <div class="center">
+      <a class="btn btn-ghost" href="index.html" data-eb-editable="link" data-eb-key="tienda-producto.a.42" data-eb-role="a" data-eb-kind="link">Ver catálogo completo</a>
+    </div>
+  </section>
 </main>
-<footer><div class="wrap">© <span data-year>2026</span> EL CAPO · Detalle conectado a inventario.</div></footer>
-<script src="../script.js"></script>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="../index.html" style="margin-bottom:10px" data-eb-editable="link" data-eb-key="tienda-producto.a.43" data-eb-role="a" data-eb-kind="link"><span class="logo">C</span><span><b>EL CAPO</b><small>COMIDA RÁPIDA • CAMPECHE</small></span></a>
+      <p data-eb-editable="text" data-eb-key="tienda-producto.p.44" data-eb-role="p" data-eb-kind="text">Detalle de producto EL CAPO: tacos, pizzas, hamburguesas, tortas y más a domicilio en Campeche. Lun a Vie 7:00-21:00, Sáb 8:00-22:00, Dom 9:00-15:00.</p>
+    </div>
+    <nav aria-label="Enlaces tienda">
+      <a href="../index.html" data-eb-editable="link" data-eb-key="tienda-producto.a.45" data-eb-role="a" data-eb-kind="link">Inicio</a>
+      <a href="index.html" data-eb-editable="link" data-eb-key="tienda-producto.a.46" data-eb-role="a" data-eb-kind="link">Tienda</a>
+      <a href="carrito.html" data-eb-editable="link" data-eb-key="tienda-producto.a.47" data-eb-role="a" data-eb-kind="link">Carrito</a>
+      <a href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-producto.a.48" data-eb-role="a" data-eb-kind="link">Mis pedidos</a>
+      <a href="tel:+529811332914" data-eb-editable="link" data-eb-key="tienda-producto.a.49" data-eb-role="a" data-eb-kind="link">981 133 2914</a>
+    </nav>
+  </div>
+  <div class="wrap"><p style="color:#6b5a48;font-size:12px" data-eb-editable="text" data-eb-key="tienda-producto.p.50" data-eb-role="p" data-eb-kind="text">© 2026 EL CAPO • Detalle informativo. Pedidos y pagos en carrito.</p></div>
+</footer>
+
+<a class="whats" href="https://wa.me/529811332914?text=Hola%20EL%20CAPO%2C%20tengo%20una%20duda%20sobre%20un%20producto" target="_blank" rel="noopener" aria-label="Dudas por WhatsApp" data-eb-editable="link" data-eb-key="tienda-producto.a.51" data-eb-role="a" data-eb-kind="link">💬 Dudas por WhatsApp</a>
+
+<script>
+// Solo presentación del detalle: muestra datos de respaldo según ?id= y selector visual de cantidad.
+// No implementa tienda, carrito, pedidos ni autenticación; eso lo hace el runtime ITM vía data-itm-*.
+(function(){
+  var catalog = {
+    'tacos-campechanos': { name:'Orden de tacos campechanos (5 pzas)', price:95, unit:'MXN • Orden 5 pzas', cat:'Tacos • A domicilio', emoji:'🌮', desc:'Bistec, pastor y chorizo con cebolla, cilantro y salsa de la casa. Tortilla suave recién calentada.', ing:'Bistec, pastor, chorizo, cebolla, cilantro, salsa de la casa, limón.' },
+    'tacos-pastor': { name:'Tacos al pastor (3 pzas)', price:65, unit:'MXN • Orden 3 pzas', cat:'Tacos • A domicilio', emoji:'🔥', desc:'Pastor marinado con piña asada, cilantro y salsa roja picosa.', ing:'Cerdo al pastor, piña, cilantro, cebolla, salsa roja.' },
+    'pizza-capo-especial': { name:'Pizza Capo especial (mediana)', price:189, unit:'MXN • 8 rebanadas', cat:'Pizzas • Para compartir', emoji:'🍕', desc:'Pepperoni, jamón, tocino, pimiento y extra queso en masa artesanal al horno.', ing:'Masa artesanal, salsa de tomate, mozzarella, pepperoni, jamón, tocino, pimiento.' },
+    'pizza-hawaiana': { name:'Pizza hawaiana (mediana)', price:169, unit:'MXN • 8 rebanadas', cat:'Pizzas • Para compartir', emoji:'🍕', desc:'Jamón y piña con queso fundido, ideal para compartir en casa.', ing:'Masa artesanal, jamón, piña, mozzarella, salsa de tomate.' },
+    'hamburguesa-doble-capo': { name:'Hamburguesa doble Capo', price:129, unit:'MXN • Porción individual', cat:'Hamburguesas • A domicilio', emoji:'🍔', desc:'Doble carne jugosa, tocino crujiente, queso cheddar fundido, pan brioche tostado y aderezo capo.', ing:'Doble carne de res, tocino, cheddar, lechuga, tomate, cebolla caramelizada, pan brioche, aderezo capo.' },
+    'hamburguesa-clasica': { name:'Hamburguesa clásica sencilla', price:89, unit:'MXN • Individual', cat:'Hamburguesas • A domicilio', emoji:'🍔', desc:'Carne jugosa, lechuga, tomate, cebolla y mayonesa en pan suave.', ing:'Carne de res, lechuga, tomate, cebolla, mayonesa, pan suave.' },
+    'torta-cubana': { name:'Torta cubana gigante', price:95, unit:'MXN • Porción grande', cat:'Tortas • Para el hambre seria', emoji:'🥪', desc:'Milanesa, jamón, salchicha, huevo y quesillo en telera grande.', ing:'Milanesa, jamón, salchicha, huevo, quesillo, telera, frijoles, mayonesa.' },
+    'papas-sazonadas': { name:'Papas sazonadas + aderezo', price:59, unit:'MXN • Orden individual', cat:'Complementos • Para acompañar', emoji:'🍟', desc:'Papas crujientes con sazonador capo y aderezo a elegir.', ing:'Papa, sazonador capo, aderezo a elegir (chipotle o ranch).' },
+    'alitas-picosas': { name:'Alitas picosas (8 pzas)', price:119, unit:'MXN • 8 piezas', cat:'Complementos • Para compartir', emoji:'🍗', desc:'Búfalo o mango-habanero con apio y aderezo ranch.', ing:'Alitas de pollo, salsa búfalo o mango-habanero, apio, ranch.' },
+    'refresco-600': { name:'Refresco 600 ml (bien frío)', price:35, unit:'MXN • 600 ml', cat:'Bebidas • Bien frías', emoji:'🥤', desc:'Cola, manzana o naranja bien fría para acompañar tu pedido.', ing:'Refresco 600 ml a elegir, servido bien frío.' },
+    'agua-fresca': { name:'Agua fresca del día (1 L)', price:40, unit:'MXN • 1 litro', cat:'Bebidas • Hecha al momento', emoji:'🧃', desc:'Jamaica, horchata o limón, hecha al momento para compartir.', ing:'Agua fresca del día: jamaica, horchata o limón.' }
+  };
+  function getId(){
+    try{
+      var m = /[?&]id=([^&]+)/.exec(window.location.search || '');
+      return m ? decodeURIComponent(m[1]) : '';
+    }catch(e){ return ''; }
+  }
+  var id = getId();
+  var data = catalog[id];
+  var nameEl = document.getElementById('detail-name');
+  var priceEl = document.getElementById('detail-price');
+  var unitEl = document.getElementById('detail-unit');
+  var descEl = document.getElementById('detail-desc');
+  var ingEl = document.getElementById('detail-ingredients');
+  var catEl = document.getElementById('detail-category');
+  var emojiEl = document.getElementById('detail-emoji');
+  var flagEl = document.getElementById('detail-flag');
+  var totalEl = document.getElementById('detail-add-total');
+  if(data){
+    if(nameEl) nameEl.textContent = data.name;
+    if(priceEl) priceEl.textContent = '$' + data.price;
+    if(unitEl) unitEl.textContent = data.unit;
+    if(descEl) descEl.textContent = data.desc;
+    if(ingEl) ingEl.textContent = data.ing;
+    if(catEl) catEl.textContent = data.cat;
+    if(emojiEl) emojiEl.textContent = data.emoji;
+    if(flagEl) flagEl.textContent = data.cat;
+    try{ document.title = data.name + ' | EL CAPO'; }catch(e){}
+  }
+  function basePrice(){
+    if(data) return data.price;
+    var t = priceEl ? priceEl.textContent.replace(/[^0-9]/g,'') : '129';
+    return parseInt(t,10) || 129;
+  }
+  var qtyInput = document.getElementById('detail-qty');
+  var qtyView = document.getElementById('qty-view');
+  function sync(){
+    var v = parseInt(qtyInput.value,10);
+    if(isNaN(v)) v = 1;
+    v = Math.max(1, Math.min(20, v));
+    qtyInput.value = v;
+    if(qtyView) qtyView.textContent = String(v);
+    if(totalEl) totalEl.textContent = '$' + (basePrice()*v);
+  }
+  if(qtyInput){
+    qtyInput.addEventListener('input', sync);
+    qtyInput.addEventListener('change', sync);
+    var minus = document.getElementById('qty-minus');
+    var plus = document.getElementById('qty-plus');
+    if(minus) minus.addEventListener('click', function(){ qtyInput.value = (parseInt(qtyInput.value,10)||1)-1; sync(); });
+    if(plus) plus.addEventListener('click', function(){ qtyInput.value = (parseInt(qtyInput.value,10)||1)+1; sync(); });
+    sync();
+  }
+})();
+</script>
 
  src="../store.js" defer></script>
 </body>
