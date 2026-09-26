@@ -3,163 +3,71 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tienda EL CAPO | Pide a domicilio</title>
-<meta name="description" content="Tienda EL CAPO: busca, elige, paga con código 01 y sigue tus pedidos. Domicilio en menos de 30 minutos según ubicación en Campeche.">
+<title>Tienda EL CAPO - Catalogo</title>
+<meta name="description" content="Catálogo EL CAPO: tacos, pizzas, hamburguesas, complementos y bebidas con inventario y carrito.">
 <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-<header class="topbar">
-<div class="topbar-inner">
-<a class="brand" href="../" data-eb-editable="link" data-eb-key="tienda-index.a.1" data-eb-role="a" data-eb-kind="link"><span class="brand-mark">C</span><span class="brand-name">EL CAPO<small>TIENDA • CAMPECHE</small></span></a>
-<nav class="nav" data-nav>
-<a href="../" data-eb-editable="link" data-eb-key="tienda-index.a.2" data-eb-role="a" data-eb-kind="link">Inicio</a>
-<a href="../#menu" data-eb-editable="link" data-eb-key="tienda-index.a.3" data-eb-role="a" data-eb-kind="link">Menú</a>
-<a href="#catalogo" data-eb-editable="link" data-eb-key="tienda-index.a.4" data-eb-role="a" data-eb-kind="link">Catálogo</a>
-<a href="#carrito" data-eb-editable="link" data-eb-key="tienda-index.a.5" data-eb-role="a" data-eb-kind="link">Carrito</a>
-<a href="#pedidos" data-eb-editable="link" data-eb-key="tienda-index.a.6" data-eb-role="a" data-eb-kind="link">Mis pedidos</a>
-</nav>
-<a class="btn btn-ghost btn-sm" href="../" style="margin-left:12px" data-eb-editable="link" data-eb-key="tienda-index.a.7" data-eb-role="a" data-eb-kind="link">← Volver</a>
-<button class="menu-toggle" data-nav-toggle aria-label="Abrir menú" data-eb-editable="link" data-eb-key="tienda-index.button.8" data-eb-role="button" data-eb-kind="link">☰</button>
+<header class="site"><div class="bar">
+<a class="logo" href="../index.html" data-eb-editable="link" data-eb-key="tienda-index.a.1" data-eb-role="a" data-eb-kind="link"><span class="logo-badge">C</span><span>EL CAPO<small>TIENDA · CAMPECHE</small></span></a>
+<button class="menu-toggle" aria-label="Abrir menú" type="button" data-eb-editable="link" data-eb-key="tienda-index.button.2" data-eb-role="button" data-eb-kind="link">☰</button>
+<nav class="main"><a href="../index.html" data-eb-editable="link" data-eb-key="tienda-index.a.3" data-eb-role="a" data-eb-kind="link">Inicio</a><a href="index.html" data-eb-editable="link" data-eb-key="tienda-index.a.4" data-eb-role="a" data-eb-kind="link">Catálogo</a><a href="carrito.html" data-eb-editable="link" data-eb-key="tienda-index.a.5" data-eb-role="a" data-eb-kind="link">Carrito</a><a href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-index.a.6" data-eb-role="a" data-eb-kind="link">Mis pedidos</a><a class="btn" href="carrito.html" data-eb-editable="link" data-eb-key="tienda-index.a.7" data-eb-role="a" data-eb-kind="link">Ver carrito</a></nav>
+</div></header>
+<main class="wrap">
+<h1 style="margin-top:22px" data-eb-editable="text" data-eb-key="tienda-index.h1.8" data-eb-role="h1" data-eb-kind="text">Catálogo</h1>
+<p class="sub" data-eb-editable="text" data-eb-key="tienda-index.p.9" data-eb-role="p" data-eb-kind="text">Inventario en vivo (Neon, código 01). El carrito se comparte por proyecto en sessionStorage. Añade y sigue a detalle o carrito.</p>
+<div data-itm-store data-itm-store-view="catalog" data-project-id="25673c87-8f7b-4bb9-a7c5-8eee9e79aeba" data-store-code="01">
+  <div class="store-shell">
+    <div class="filters">
+      <button type="button" class="active" data-filter-btn="todo" data-eb-editable="link" data-eb-key="tienda-index.button.10" data-eb-role="button" data-eb-kind="link">Todo</button>
+      <button type="button" data-filter-btn="tacos" data-eb-editable="link" data-eb-key="tienda-index.button.11" data-eb-role="button" data-eb-kind="link">Tacos</button>
+      <button type="button" data-filter-btn="pizzas" data-eb-editable="link" data-eb-key="tienda-index.button.12" data-eb-role="button" data-eb-kind="link">Pizzas</button>
+      <button type="button" data-filter-btn="hamburguesas" data-eb-editable="link" data-eb-key="tienda-index.button.13" data-eb-role="button" data-eb-kind="link">Hamburguesas</button>
+      <button type="button" data-filter-btn="complementos" data-eb-editable="link" data-eb-key="tienda-index.button.14" data-eb-role="button" data-eb-kind="link">Complementos</button>
+      <button type="button" data-filter-btn="bebidas" data-eb-editable="link" data-eb-key="tienda-index.button.15" data-eb-role="button" data-eb-kind="link">Bebidas</button>
+    </div>
+    <div data-itm-product-list><template data-itm-product-card><article><img data-itm-product-image alt=""><span data-itm-product-category></span><h2 data-itm-product-name></h2><p data-itm-product-description></p><strong data-itm-product-price></strong><a data-itm-product-open href="producto.html">Ver detalles</a><button type="button" data-itm-cart-add>Agregar</button></article></template>
+      <div class="product-grid">
+        <article class="product" data-cat="tacos">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Man_making_tacos_on_the_street_in_Mexico_City.jpg/1920px-Man_making_tacos_on_the_street_in_Mexico_City.jpg" alt="Tacos al pastor" data-eb-editable="image" data-eb-key="tienda-index.img.16" data-eb-role="img" data-eb-kind="image">
+          <div class="pad"><span class="tag">Tacos</span><h3 data-eb-editable="text" data-eb-key="tienda-index.h3.17" data-eb-role="h3" data-eb-kind="text">Tacos al pastor (3 pzas)</h3><p class="small" data-eb-editable="text" data-eb-key="tienda-index.p.18" data-eb-role="p" data-eb-kind="text">Trompo, cilantro, cebolla y salsa. <span class="price">$75</span></p>
+          <div class="actions"><a class="btn" href="producto.html?id=tacos-pastor" data-eb-editable="link" data-eb-key="tienda-index.a.19" data-eb-role="a" data-eb-kind="link">Ver detalle</a></div></div>
+        </article>
+        <article class="product" data-cat="pizzas">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Wood-fired_Pizza_Oven_at_Baronessa_Italian_Restaurant.jpg/1920px-Wood-fired_Pizza_Oven_at_Baronessa_Italian_Restaurant.jpg" alt="Pizza especial" data-eb-editable="image" data-eb-key="tienda-index.img.20" data-eb-role="img" data-eb-kind="image">
+          <div class="pad"><span class="tag">Pizzas</span><h3 data-eb-editable="text" data-eb-key="tienda-index.h3.21" data-eb-role="h3" data-eb-kind="text">Pizza especial EL CAPO</h3><p class="small" data-eb-editable="text" data-eb-key="tienda-index.p.22" data-eb-role="p" data-eb-kind="text">Pepperoni, jamón y queso extra. <span class="price">$189</span></p>
+          <div class="actions"><a class="btn" href="producto.html?id=pizza-capo" data-eb-editable="link" data-eb-key="tienda-index.a.23" data-eb-role="a" data-eb-kind="link">Ver detalle</a></div></div>
+        </article>
+        <article class="product" data-cat="hamburguesas">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Energy_drink_and_fast_food_cheeseburger_calorie_comparison.jpg/1920px-Energy_drink_and_fast_food_cheeseburger_calorie_comparison.jpg" alt="Hamburguesa" data-eb-editable="image" data-eb-key="tienda-index.img.24" data-eb-role="img" data-eb-kind="image">
+          <div class="pad"><span class="tag">Hamburguesas</span><h3 data-eb-editable="text" data-eb-key="tienda-index.h3.25" data-eb-role="h3" data-eb-kind="text">Hamburguesa doble con queso</h3><p class="small" data-eb-editable="text" data-eb-key="tienda-index.p.26" data-eb-role="p" data-eb-kind="text">Doble carne, queso fundido. <span class="price">$119</span></p>
+          <div class="actions"><a class="btn" href="producto.html?id=burger-doble" data-eb-editable="link" data-eb-key="tienda-index.a.27" data-eb-role="a" data-eb-kind="link">Ver detalle</a></div></div>
+        </article>
+        <article class="product" data-cat="complementos">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Shake_shack_cheese_fries.jpg" alt="Papas con queso" data-eb-editable="image" data-eb-key="tienda-index.img.28" data-eb-role="img" data-eb-kind="image">
+          <div class="pad"><span class="tag">Complementos</span><h3 data-eb-editable="text" data-eb-key="tienda-index.h3.29" data-eb-role="h3" data-eb-kind="text">Papas con queso</h3><p class="small" data-eb-editable="text" data-eb-key="tienda-index.p.30" data-eb-role="p" data-eb-kind="text">Papas crujientes con queso. <span class="price">$65</span></p>
+          <div class="actions"><a class="btn" href="producto.html?id=papas-queso" data-eb-editable="link" data-eb-key="tienda-index.a.31" data-eb-role="a" data-eb-kind="link">Ver detalle</a></div></div>
+        </article>
+        <article class="product" data-cat="bebidas">
+          <div class="card-art small-art" aria-hidden="true">🥤</div>
+          <div class="pad"><span class="tag">Bebidas</span><h3 data-eb-editable="text" data-eb-key="tienda-index.h3.32" data-eb-role="h3" data-eb-kind="text">Refresco 600 ml</h3><p class="small" data-eb-editable="text" data-eb-key="tienda-index.p.33" data-eb-role="p" data-eb-kind="text">Sabor a elegir, bien frío. <span class="price">$35</span></p>
+          <div class="actions"><a class="btn" href="producto.html?id=refresco-600" data-eb-editable="link" data-eb-key="tienda-index.a.34" data-eb-role="a" data-eb-kind="link">Ver detalle</a></div></div>
+        </article>
+        <article class="product" data-cat="tacos">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Mulitas_al_pastor.JPG/1920px-Mulitas_al_pastor.JPG" alt="Mulitas" data-eb-editable="image" data-eb-key="tienda-index.img.35" data-eb-role="img" data-eb-kind="image">
+          <div class="pad"><span class="tag">Tacos</span><h3 data-eb-editable="text" data-eb-key="tienda-index.h3.36" data-eb-role="h3" data-eb-kind="text">Mulitas al pastor</h3><p class="small" data-eb-editable="text" data-eb-key="tienda-index.p.37" data-eb-role="p" data-eb-kind="text">Queso fundido y pastor. <span class="price">$85</span></p>
+          <div class="actions"><a class="btn" href="producto.html?id=mulitas-pastor" data-eb-editable="link" data-eb-key="tienda-index.a.38" data-eb-role="a" data-eb-kind="link">Ver detalle</a></div></div>
+        </article>
+      </div>
+      <p class="small" data-eb-editable="text" data-eb-key="tienda-index.p.39" data-eb-role="p" data-eb-kind="text">El runtime ITM reemplaza/completa esta lista con el inventario Neon (código 01). Usa las fichas para ir a <code>/tienda/producto.html?id=...</code>.</p>
+    </div>
+  </div>
 </div>
-</header>
-
-<section class="store-hero">
-<div class="wrap">
-<span class="badge">🔥 TIENDA ACTIVA • PAGO CON CÓDIGO 01</span>
-<h1 style="font-family:var(--font-display);font-size:clamp(28px,5vw,50px);margin:12px 0 8px;text-transform:uppercase" data-eb-editable="text" data-eb-key="tienda-index.h1.9" data-eb-role="h1" data-eb-kind="text">Pide tu antojo <span style="color:var(--flame)">sin llamadas</span></h1>
-<p class="subtitle" data-eb-editable="text" data-eb-key="tienda-index.p.10" data-eb-role="p" data-eb-kind="text">Busca tu producto, ábrelo, agrega al carrito, paga con el código de cobro y revisa <strong>Mis pedidos</strong>. Domicilio en menos de 30 minutos según tu ubicación. 📞 9811332914</p>
-</div>
-</section>
-
-<main class="wrap" style="padding:22px 20px 10px">
-<div class="store-shell" data-itm-store data-project-id="25673c87-8f7b-4bb9-a7c5-8eee9e79aeba">
-
-<section id="catalogo" aria-label="Catálogo">
-<h2 class="title" style="font-size:28px" data-eb-editable="text" data-eb-key="tienda-index.h2.11" data-eb-role="h2" data-eb-kind="text">Catálogo</h2>
-<div class="search-bar">
-<input type="search" data-itm-product-search placeholder="Buscar pizza, tacos, hamburguesa, papas…" aria-label="Buscar productos">
-</div>
-<p class="hint" data-eb-editable="text" data-eb-key="tienda-index.p.12" data-eb-role="p" data-eb-kind="text">Escribe para filtrar. Toca “Ver” para el detalle y “Agregar” para el carrito. El inventario y los precios los gestiona el sistema.</p>
-
-<div data-itm-product-list class="product-grid"></div>
-
-<template data-itm-product-card>
-<article class="product-card">
-<img data-itm-product-image alt="Producto EL CAPO" data-eb-editable="image" data-eb-key="tienda-index.img.13" data-eb-role="img" data-eb-kind="image">
-<div class="product-card-body">
-<span class="product-cat" data-itm-product-category></span>
-<h3 data-itm-product-name data-eb-editable="text" data-eb-key="tienda-index.h3.14" data-eb-role="h3" data-eb-kind="text"></h3>
-<p data-itm-product-description data-eb-editable="text" data-eb-key="tienda-index.p.15" data-eb-role="p" data-eb-kind="text"></p>
-<div class="product-meta"><span class="product-price" data-itm-product-price></span></div>
-<div class="product-actions">
-<button type="button" class="btn btn-ghost btn-sm" data-itm-product-open data-eb-editable="link" data-eb-key="tienda-index.button.16" data-eb-role="button" data-eb-kind="link">Ver</button>
-<button type="button" class="btn btn-primary btn-sm" data-itm-cart-add data-eb-editable="link" data-eb-key="tienda-index.button.17" data-eb-role="button" data-eb-kind="link">Agregar</button>
-</div>
-</div>
-</article>
-</template>
-</section>
-
-<section data-itm-product-detail class="detail-box" aria-label="Detalle de producto">
-<img data-itm-detail-image alt="Detalle de producto" data-eb-editable="image" data-eb-key="tienda-index.img.18" data-eb-role="img" data-eb-kind="image">
-<div>
-<span class="product-cat" data-itm-detail-category></span>
-<h3 data-itm-detail-name style="margin:6px 0;font-size:24px" data-eb-editable="text" data-eb-key="tienda-index.h3.19" data-eb-role="h3" data-eb-kind="text"></h3>
-<p data-itm-detail-description style="color:var(--muted)" data-eb-editable="text" data-eb-key="tienda-index.p.20" data-eb-role="p" data-eb-kind="text"></p>
-<div class="product-price" data-itm-detail-price style="font-size:24px"></div>
-<div class="qty-row">
-<label>Cantidad <input type="number" min="1" value="1" data-itm-detail-quantity></label>
-</div>
-<div style="display:flex;gap:10px;flex-wrap:wrap">
-<button type="button" class="btn btn-primary btn-sm" data-itm-detail-add data-eb-editable="link" data-eb-key="tienda-index.button.21" data-eb-role="button" data-eb-kind="link">Agregar al carrito</button>
-<button type="button" class="btn btn-ghost btn-sm" data-itm-detail-close data-eb-editable="link" data-eb-key="tienda-index.button.22" data-eb-role="button" data-eb-kind="link">Cerrar</button>
-</div>
-</div>
-</section>
-
-<div class="cart-layout" id="carrito">
-<section data-itm-cart class="cart-box" aria-label="Carrito">
-<h2 style="margin:0;font-family:var(--font-display)" data-eb-editable="text" data-eb-key="tienda-index.h2.23" data-eb-role="h2" data-eb-kind="text">Tu carrito</h2>
-<p class="hint" data-eb-editable="text" data-eb-key="tienda-index.p.24" data-eb-role="p" data-eb-kind="text">Revisa cantidades antes de pagar.</p>
-<div data-itm-cart-items></div>
-<template data-itm-cart-item>
-<div class="cart-item">
-<strong data-itm-cart-name></strong>
-<button type="button" class="btn btn-ghost btn-sm" data-itm-cart-remove aria-label="Quitar" data-eb-editable="link" data-eb-key="tienda-index.button.25" data-eb-role="button" data-eb-kind="link">✕</button>
-<small><span data-itm-cart-price></span> × <span data-itm-cart-quantity></span></small>
-<strong data-itm-cart-line-total></strong>
-</div>
-</template>
-<div class="cart-total-line"><span>Total</span><span data-itm-cart-total>$0</span></div>
-</section>
-
-<section class="checkout-box" aria-label="Pago">
-<h2 style="margin:0;font-family:var(--font-display)" data-eb-editable="text" data-eb-key="tienda-index.h2.26" data-eb-role="h2" data-eb-kind="text">Pago y entrega</h2>
-<form data-itm-checkout>
-<label>Tu nombre*
-<input required name="customer_name" data-itm-customer-name placeholder="Ej. María López" autocomplete="name">
-</label>
-<label>Teléfono (opcional)
-<input name="customer_phone" data-itm-customer-phone placeholder="Ej. 981 123 4567" autocomplete="tel">
-</label>
-<label>Nota de entrega (opcional)
-<textarea name="customer_note" rows="2" data-itm-customer-note placeholder="Colonia, calle, referencias…"></textarea>
-</label>
-<label>Código de pago* <small style="font-weight:400">Usa el código 01 para confirmar</small>
-<input required name="payment_code" data-itm-payment-code placeholder="01" inputmode="numeric">
-</label>
-<button type="submit" class="btn btn-primary" data-itm-pay style="width:100%;margin-top:8px" data-eb-editable="link" data-eb-key="tienda-index.button.27" data-eb-role="button" data-eb-kind="link">Pagar pedido</button>
-<p class="status" data-itm-checkout-status role="status" aria-live="polite" data-eb-editable="text" data-eb-key="tienda-index.p.28" data-eb-role="p" data-eb-kind="text"></p>
-</form>
-</section>
-</div>
-
-<section data-itm-orders class="orders-box" id="pedidos" style="margin-top:16px" aria-label="Mis pedidos">
-<h2 style="margin:0;font-family:var(--font-display)" data-eb-editable="text" data-eb-key="tienda-index.h2.29" data-eb-role="h2" data-eb-kind="text">Mis pedidos</h2>
-<p class="hint" data-eb-editable="text" data-eb-key="tienda-index.p.30" data-eb-role="p" data-eb-kind="text">Pedidos del visitante autenticado en este proyecto. Inicia sesión si se te solicita para verlos.</p>
-<div data-itm-order-list></div>
-<template data-itm-order-card>
-<article class="order-card">
-<header>
-<strong data-itm-order-id></strong>
-<span class="pill" data-itm-order-status></span>
-</header>
-<p style="color:var(--muted);font-size:13px;margin:8px 0" data-eb-editable="text" data-eb-key="tienda-index.p.31" data-eb-role="p" data-eb-kind="text">
-<span data-itm-order-created></span> • <span data-itm-order-payment></span> • Total <strong data-itm-order-total style="color:#fff"></strong>
-</p>
-<div data-itm-order-items style="font-size:14px;color:var(--muted)"></div>
-</article>
-</template>
-</section>
-
-<script type="application/json" id="itm-catalog-seed">
-{
-  "project_id": "25673c87-8f7b-4bb9-a7c5-8eee9e79aeba",
-  "currency": "MXN",
-  "products": [
-    {"name":"Pizza Capo Especial","category":"Pizzas","price":149,"description":"Pepperoni, queso fundido y salsa de la casa en masa artesanal.","image":"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Pepperoni_pizza-_boella_co._2024-02-17.jpg/1920px-Pepperoni_pizza-_boella_co._2024-02-17.jpg"},
-    {"name":"Tacos al Pastor x3","category":"Tacos","price":75,"description":"Trompo marinado con piña, cilantro, cebolla y salsa roja.","image":"https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Taco_al_pastor-1.jpg/1920px-Taco_al_pastor-1.jpg"},
-    {"name":"Hamburguesa Doble Capo","category":"Hamburguesas","price":129,"description":"Doble carne, doble queso, tocino y aderezo secreto en pan brioche.","image":"https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Cheeseburger.jpg/1920px-Cheeseburger.jpg"},
-    {"name":"Quesadilla Capo con Aguacate","category":"Antojitos","price":89,"description":"Tortilla grande, queso fundido y aguacate fresco.","image":"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Mexican_Food_Quesadillas_with_Avocado_02.jpg/1920px-Mexican_Food_Quesadillas_with_Avocado_02.jpg"},
-    {"name":"Papas Cargadas Capo","category":"Complementos","price":69,"description":"Papas con queso, tocino y aderezo de la casa.","image":"https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Basket_of_French_Fries.JPG/1920px-Basket_of_French_Fries.JPG"},
-    {"name":"Combo Capo Burger + Papas","category":"Combos","price":159,"description":"Hamburguesa clásica con papas a la francesa. Ideal para compartir.","image":"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Pub_food_for_the_Win_%28Unsplash%29.jpg/1920px-Pub_food_for_the_Win_%28Unsplash%29.jpg"},
-    {"name":"Alitas BBQ x6","category":"Complementos","price":99,"description":"Alitas bañadas en BBQ artesanal, con aderezo ranch.","image":"https://upload.wikimedia.org/wikipedia/commons/0/08/BBQ_Bonanza_platter.jpg"},
-    {"name":"Refresco bien frío 600ml","category":"Bebidas","price":35,"description":"Refresco de cola o sabor bien frío para acompañar.","image":"https://upload.wikimedia.org/wikipedia/commons/0/04/Thai_bevarages_in_ice.JPG"}
-  ]
-}
-</script>
-
-</div>
+<p data-eb-editable="text" data-eb-key="tienda-index.p.40" data-eb-role="p" data-eb-kind="text"><a href="carrito.html" data-eb-editable="link" data-eb-key="tienda-index.a.41" data-eb-role="a" data-eb-kind="link">Ir al carrito y checkout →</a> · <a href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-index.a.42" data-eb-role="a" data-eb-kind="link">Mis pedidos →</a> · <a href="../index.html" data-eb-editable="link" data-eb-key="tienda-index.a.43" data-eb-role="a" data-eb-kind="link">← Volver al inicio</a></p>
 </main>
-
-<footer>
-<div class="wrap foot-grid">
-<div><strong style="color:#fff">EL CAPO • Tienda</strong><br>Domicilio en menos de 30 min según ubicación.<br>© <span data-year>2026</span> EL CAPO.</div>
-<div>📞 9811332914 • <a href="../" data-eb-editable="link" data-eb-key="tienda-index.a.32" data-eb-role="a" data-eb-kind="link">Inicio</a> • Lun–Vie 7–21 • Sáb 8–22 • Dom 9–15</div>
-</div>
-</footer>
+<footer><div class="wrap">© <span data-year>2026</span> EL CAPO · Catálogo conectado a inventario. Fotos: Wikimedia Commons.</div></footer>
 <script src="../script.js"></script>
 
-<script src="../store.js" defer></script>
+ src="../store.js" defer></script>
 </body>
 </html>
