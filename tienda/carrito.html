@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Carrito y checkout - Tienda EL CAPO</title>
+<meta name="description" content="Carrito y checkout EL CAPO: edita tu pedido a domicilio en Campeche y confírmalo con pedido autenticado.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<header class="site"><div class="bar">
+<a class="logo" href="../index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.1" data-eb-role="a" data-eb-kind="link"><span class="logo-badge">C</span><span>EL CAPO<small>CARRITO</small></span></a>
+<button class="menu-toggle" aria-label="Abrir menú" type="button" data-eb-editable="link" data-eb-key="tienda-carrito.button.2" data-eb-role="button" data-eb-kind="link">☰</button>
+<nav class="main"><a href="../index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.3" data-eb-role="a" data-eb-kind="link">Inicio</a><a href="index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.4" data-eb-role="a" data-eb-kind="link">Catálogo</a><a href="carrito.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.5" data-eb-role="a" data-eb-kind="link">Carrito</a><a href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.6" data-eb-role="a" data-eb-kind="link">Mis pedidos</a><a class="btn" href="index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.7" data-eb-role="a" data-eb-kind="link">Seguir comprando</a></nav>
+<div data-itm-cart-items><input required data-itm-customer-name placeholder="Nombre"><input data-itm-customer-phone placeholder="Teléfono"><textarea data-itm-customer-note placeholder="Nota o dirección"></textarea><input required data-itm-payment-code placeholder="Código 01"><button type="submit" data-itm-pay>Confirmar pedido</button><p data-itm-checkout-status></p>\n</div><template data-itm-cart-item><article><strong data-itm-cart-name></strong><span data-itm-cart-price></span><input type="number" min="1" data-itm-cart-quantity><strong data-itm-cart-line-total></strong><button type="button" data-itm-cart-remove>Quitar</button></article></template><p data-itm-cart-empty>Tu carrito está vacío.</p><strong data-itm-cart-total></strong>\n</div></header>
+<main class="wrap">
+<h1 style="margin-top:22px" data-eb-editable="text" data-eb-key="tienda-carrito.h1.8" data-eb-role="h1" data-eb-kind="text">Carrito y checkout</h1>
+<p class="sub" data-eb-editable="text" data-eb-key="tienda-carrito.p.9" data-eb-role="p" data-eb-kind="text">Carrito editable por proyecto, totales y confirmación de pedido autenticado (Neon, código 01). La compra solo se confirma en el checkout.</p>
+<div data-itm-store data-itm-store-view="cart" data-project-id="25673c87-8f7b-4bb9-a7c5-8eee9e79aeba" data-store-code="01">
+  <div class="store-shell">
+    <h2 data-eb-editable="text" data-eb-key="tienda-carrito.h2.10" data-eb-role="h2" data-eb-kind="text">Tu carrito</h2>
+    <div data-itm-cart>
+      <div class="cart-line"><span>Ejemplo: Tacos al pastor × 2</span><strong>$150</strong></div>
+      <div class="cart-line"><span>Ejemplo: Pizza especial × 1</span><strong>$189</strong></div>
+      <div class="cart-line"><span>Subtotal ejemplo</span><strong>$339</strong></div>
+      <p class="small" data-eb-editable="text" data-eb-key="tienda-carrito.p.11" data-eb-role="p" data-eb-kind="text">El runtime ITM muestra aquí las líneas reales editables (cantidades, vaciar, subtotal y total). Este contenido es solo de referencia.</p>
+    </div>
+    <hr style="border-color:var(--line)">
+    <h2 data-eb-editable="text" data-eb-key="tienda-carrito.h2.12" data-eb-role="h2" data-eb-kind="text">Checkout a domicilio</h2>
+    <div data-itm-checkout>
+      <form class="checkout" onsubmit="return false">
+        <div><label>Nombre completo<input required placeholder="Tu nombre" autocomplete="name" type="text"></label></div>
+        <div><label>Dirección de entrega en Campeche<input required placeholder="Calle, número, colonia, referencia" autocomplete="street-address" type="text"></label></div>
+        <div><label>Teléfono de contacto<input required placeholder="981..." autocomplete="tel" type="tel"></label></div>
+        <div><label>Notas<textarea rows="2" placeholder="Ej. salsa aparte, timbre, etc."></textarea></label></div>
+        <p class="notice" data-eb-editable="text" data-eb-key="tienda-carrito.p.13" data-eb-role="p" data-eb-kind="text">Al confirmar, el pedido se guarda como pedido autenticado del visitante. Podrás verlo en <a href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.14" data-eb-role="a" data-eb-kind="link">Mis pedidos</a>.</p>
+        <div><button class="btn" type="submit" data-eb-editable="link" data-eb-key="tienda-carrito.button.15" data-eb-role="button" data-eb-kind="link">Confirmar pedido (runtime ITM)</button> <a class="btn ghost" href="index.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.16" data-eb-role="a" data-eb-kind="link">Vaciar / seguir comprando</a></div>
+      </form>
+    </div>
+  </div>
+</div>
+<p data-eb-editable="text" data-eb-key="tienda-carrito.p.17" data-eb-role="p" data-eb-kind="text"><a href="pedidos.html" data-eb-editable="link" data-eb-key="tienda-carrito.a.18" data-eb-role="a" data-eb-kind="link">Ver Mis pedidos →</a></p>
+</main>
+<footer><div class="wrap">© <span data-year>2026</span> EL CAPO · Checkout autenticado.</div></footer>
+<script src="../script.js"></script>
+
+ src="../store.js" defer></script>
+</body>
+</html>
